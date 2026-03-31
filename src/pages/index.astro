@@ -1,0 +1,812 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Techno Inventors | eSTREAM Education Puerto Rico"
+  description="Techno Inventors forma líderes socialmente responsables a través del modelo eSTREAM (eSports, Ciencia, Tecnología, Robótica, Ingeniería, Arte y Matemáticas) en Puerto Rico."
+>
+  <Header />
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" role="dialog" aria-modal="true">
+    <button id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg-canvas" aria-hidden="true">
+      <div class="hero-particles" id="hero-particles"></div>
+      <div class="hero-glow" style="width:700px;height:700px;top:-200px;right:-200px;"></div>
+      <div class="hero-glow" style="width:400px;height:400px;bottom:-100px;left:-100px;opacity:0.5;"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="badge"><span class="badge-dot"></span>eSTREAM Education · Puerto Rico</div>
+          <h1 class="hero-title">
+            <span data-lang="es">Formamos los <span class="accent">Líderes del Futuro</span> Tecnológico</span>
+            <span data-lang="en">We Build the <span class="accent">Future's Tech Leaders</span></span>
+          </h1>
+          <p class="hero-desc">
+            <span data-lang="es">Techno Inventors es una organización sin fines de lucro que educa a niños y jóvenes de Puerto Rico en eSports, Ciencias, Tecnología, Robótica, Ingeniería, Arte y Matemáticas — el modelo <strong style="color:var(--light-blue);">eSTREAM</strong>.</span>
+            <span data-lang="en">Techno Inventors is a nonprofit that educates children and youth in Puerto Rico through eSports, Science, Technology, Robotics, Engineering, Arts and Mathematics — the <strong style="color:var(--light-blue);">eSTREAM</strong> model.</span>
+          </p>
+          <div class="hero-buttons">
+            <a href="#offerings" class="btn btn-primary">
+              <span data-lang="es">🚀 Ver Ofrecimientos</span>
+              <span data-lang="en">🚀 Explore Programs</span>
+            </a>
+            <a href="#contact-cta" class="btn btn-outline">
+              <span data-lang="es">Hablar con un Asesor</span>
+              <span data-lang="en">Speak with an Advisor</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="num" data-count="35753">0</span>
+              <span class="lbl" data-lang="es">Participantes</span>
+              <span class="lbl" data-lang="en">Participants</span>
+            </div>
+            <div class="hero-stat">
+              <span class="num" data-count="8894">0</span>
+              <span class="lbl" data-lang="es">Hrs de Voluntariado</span>
+              <span class="lbl" data-lang="en">Volunteer Hours</span>
+            </div>
+            <div class="hero-stat">
+              <span class="num" data-count="73">0</span>
+              <span class="lbl" data-lang="es">Organizaciones</span>
+              <span class="lbl" data-lang="en">Organizations</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-img-wrap">
+            <img src="/images/Ofrecimientos/After-School.webp" alt="Students learning STEM at Techno Inventors" loading="eager" />
+          </div>
+          <div class="hero-float-badge b1">
+            <span class="icon">🤖</span>
+            <div>
+              <strong style="display:block;color:white;font-size:0.85rem;">Robótica &amp; Coding</strong>
+              <span style="color:rgba(255,255,255,0.6);font-size:0.72rem;" data-lang="es">Aprende haciendo</span>
+              <span style="color:rgba(255,255,255,0.6);font-size:0.72rem;" data-lang="en">Learn by doing</span>
+            </div>
+          </div>
+          <div class="hero-float-badge b2">
+            <span class="icon">🏆</span>
+            <div>
+              <strong style="display:block;color:white;font-size:0.85rem;" data-lang="es">Competencias Mundiales</strong>
+              <strong style="display:block;color:white;font-size:0.85rem;" data-lang="en">World Competitions</strong>
+              <span style="color:rgba(255,255,255,0.6);font-size:0.72rem;" data-lang="es">Representando a PR</span>
+              <span style="color:rgba(255,255,255,0.6);font-size:0.72rem;" data-lang="en">Representing PR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== eSTREAM BAR ===== -->
+  <div id="estream-bar" aria-label="eSTREAM model">
+    <div class="estream-inner">
+      <div class="estream-item"><span class="estream-letter">e</span><span class="estream-word">eSports</span></div>
+      <div class="estream-item"><span class="estream-letter">S</span><span class="estream-word" data-lang="es">Ciencias</span><span class="estream-word" data-lang="en">Science</span></div>
+      <div class="estream-item"><span class="estream-letter">T</span><span class="estream-word" data-lang="es">Tecnología</span><span class="estream-word" data-lang="en">Technology</span></div>
+      <div class="estream-item"><span class="estream-letter">R</span><span class="estream-word" data-lang="es">Robótica</span><span class="estream-word" data-lang="en">Robotics</span></div>
+      <div class="estream-item"><span class="estream-letter">E</span><span class="estream-word" data-lang="es">Ingeniería</span><span class="estream-word" data-lang="en">Engineering</span></div>
+      <div class="estream-item"><span class="estream-letter">A</span><span class="estream-word" data-lang="es">Arte</span><span class="estream-word" data-lang="en">Arts</span></div>
+      <div class="estream-item"><span class="estream-letter">M</span><span class="estream-word" data-lang="es">Matemáticas</span><span class="estream-word" data-lang="en">Mathematics</span></div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-grid reveal">
+          <img src="/images/early-inventors/IMG_0459.webp" alt="Early Inventors student learning" class="img-tall" style="height:100%;min-height:360px;" />
+          <img src="/images/olimpiadas/IMG_5247.webp" alt="Olimpiadas de robótica" style="height:170px;" />
+          <img src="/images/wro/IMG_1622.webp" alt="World Robot Olympiad Puerto Rico" style="height:170px;" />
+        </div>
+        <div class="about-text reveal reveal-delay-2">
+          <span class="section-tag" data-lang="es">¿Quiénes Somos?</span>
+          <span class="section-tag" data-lang="en">About Us</span>
+          <h2 class="section-title" data-lang="es">La sinergia entre precisión técnica e impacto comunitario</h2>
+          <h2 class="section-title" data-lang="en">The synergy between technical precision and community impact</h2>
+          <p class="section-subtitle" data-lang="es">Somos una organización sin fines de lucro en Puerto Rico fundada por el Ing. César Cabrera. Capacitamos y promovemos líderes socialmente responsables que contribuyen a resolver problemas y al desarrollo de la comunidad a través del modelo educativo eSTREAM.</p>
+          <p class="section-subtitle" data-lang="en">We are a nonprofit organization in Puerto Rico founded by Engineer César Cabrera. We train and promote socially responsible leaders who contribute to problem-solving and community development through the eSTREAM educational model.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="feature-icon">🎓</span>
+              <div class="feature-text">
+                <h4 data-lang="es">Educación por Proyectos</h4>
+                <h4 data-lang="en">Project-Based Learning</h4>
+                <p data-lang="es">Aprenden construyendo, programando y compitiendo en el mundo real.</p>
+                <p data-lang="en">Students learn by building, coding and competing in the real world.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="feature-icon">🌐</span>
+              <div class="feature-text">
+                <h4 data-lang="es">Competencias Mundiales</h4>
+                <h4 data-lang="en">World Competitions</h4>
+                <p data-lang="es">Participamos en torneos y olimpiadas internacionales de tecnología.</p>
+                <p data-lang="en">We participate in international technology tournaments and olympiads.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="feature-icon">🤝</span>
+              <div class="feature-text">
+                <h4 data-lang="es">Red de Alianzas</h4>
+                <h4 data-lang="en">Alliance Network</h4>
+                <p data-lang="es">Colaboramos con universidades, empresas y organizaciones líderes.</p>
+                <p data-lang="en">We collaborate with leading universities, companies and organizations.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="feature-icon">💡</span>
+              <div class="feature-text">
+                <h4 data-lang="es">Innovación Social</h4>
+                <h4 data-lang="en">Social Innovation</h4>
+                <p data-lang="es">Transformamos comunidades a través de la tecnología y el liderazgo.</p>
+                <p data-lang="en">We transform communities through technology and leadership.</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:28px;">
+            <a href="/nosotros" class="btn btn-navy">
+              <span data-lang="es">Conocer más →</span>
+              <span data-lang="en">Learn more →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section id="stats" aria-label="Impact statistics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <span class="stat-number" data-count="35753">35,753</span>
+          <p class="stat-label" data-lang="es">Estudiantes Impactados</p>
+          <p class="stat-label" data-lang="en">Students Impacted</p>
+          <div class="stat-divider"></div>
+        </div>
+        <div class="stat-card reveal reveal-delay-1">
+          <span class="stat-number" data-count="8894">8,894</span>
+          <p class="stat-label" data-lang="es">Horas de Voluntariado</p>
+          <p class="stat-label" data-lang="en">Volunteer Hours</p>
+          <div class="stat-divider"></div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <span class="stat-number" data-count="73">73</span>
+          <p class="stat-label" data-lang="es">Instituciones Aliadas</p>
+          <p class="stat-label" data-lang="en">Partner Institutions</p>
+          <div class="stat-divider"></div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <span class="stat-number" data-count="3456">3,456</span>
+          <p class="stat-label" data-lang="es">Familias Beneficiadas</p>
+          <p class="stat-label" data-lang="en">Families Benefited</p>
+          <div class="stat-divider"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFERINGS ===== -->
+  <section id="offerings" class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag" data-lang="es">Nuestros Programas</span>
+        <span class="section-tag" data-lang="en">Our Programs</span>
+        <h2 class="section-title" data-lang="es">Ofrecimientos para cada etapa del aprendizaje</h2>
+        <h2 class="section-title" data-lang="en">Programs for every stage of learning</h2>
+        <p class="section-subtitle" data-lang="es">Diseñamos experiencias educativas inmersivas que despiertan la pasión por la tecnología y desarrollan las habilidades del siglo XXI que el mundo necesita.</p>
+        <p class="section-subtitle" data-lang="en">We design immersive educational experiences that ignite a passion for technology and develop the 21st-century skills the world needs.</p>
+      </div>
+      <div class="offerings-grid">
+
+        <div class="offering-card reveal">
+          <div class="offering-img">
+            <img src="/images/Ofrecimientos/After-School.webp" alt="eSTREAM Academy After School Program" loading="lazy" />
+            <span class="offering-tag" data-lang="es">6to – 12mo Grado</span>
+            <span class="offering-tag" data-lang="en">Grades 6–12</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">eSTREAM Academy</h3>
+            <h3 data-lang="en">eSTREAM Academy</h3>
+            <p data-lang="es">Programa after-school de lunes a viernes. Los estudiantes aprenden robótica, programación, desarrollo de videojuegos, realidad virtual y aumentada en un ambiente de alta tecnología.</p>
+            <p data-lang="en">Monday-to-Friday after-school program. Students learn robotics, programming, video game development, virtual and augmented reality in a high-tech environment.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">📅 <span data-lang="es">Lun – Vie</span><span data-lang="en">Mon – Fri</span></span>
+              <a href="/ofrecimientos/estream-academy" class="btn btn-primary">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card reveal reveal-delay-1">
+          <div class="offering-img">
+            <img src="/images/Ofrecimientos/Saturday-Club.webp" alt="Saturday Tech Clubs" loading="lazy" />
+            <span class="offering-tag" data-lang="es">Todos los Sábados</span>
+            <span class="offering-tag" data-lang="en">Every Saturday</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Saturday Club</h3>
+            <h3 data-lang="en">Saturday Club</h3>
+            <p data-lang="es">Clubes sabatinos donde exploramos robótica, eSports, diseño digital y programación en un ambiente dinámico y colaborativo. ¡Los sábados son para innovar!</p>
+            <p data-lang="en">Saturday clubs where we explore robotics, eSports, digital design, and programming in a dynamic and collaborative environment. Saturdays are for innovating!</p>
+            <div class="offering-footer">
+              <span class="offering-meta">📅 <span data-lang="es">Sábados</span><span data-lang="en">Saturdays</span></span>
+              <a href="/ofrecimientos/saturday-club" class="btn btn-primary">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card reveal reveal-delay-2">
+          <div class="offering-img">
+            <img src="/images/Ofrecimientos/Summer-Camp.webp" alt="Summer Tech Camp" loading="lazy" />
+            <span class="offering-tag" data-lang="es">Verano</span>
+            <span class="offering-tag" data-lang="en">Summer</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Summer Camp</h3>
+            <h3 data-lang="en">Summer Camp</h3>
+            <p data-lang="es">Campamento de verano con inmersión total en tecnología e innovación. Semanas intensivas de programación, robótica, drones, realidad virtual y diseño digital.</p>
+            <p data-lang="en">Summer camp with total technology and innovation immersion. Intensive weeks of programming, robotics, drones, virtual reality, and digital design.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">☀️ <span data-lang="es">Junio – Agosto</span><span data-lang="en">June – August</span></span>
+              <a href="/ofrecimientos/summer-camp" class="btn btn-primary">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card reveal">
+          <div class="offering-img">
+            <img src="/images/Ofrecimientos/Spring-Break-Camp.webp" alt="Spring Break Camp" loading="lazy" />
+            <span class="offering-tag" data-lang="es">Semana Santa</span>
+            <span class="offering-tag" data-lang="en">Spring Break</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Spring Break Camp</h3>
+            <h3 data-lang="en">Spring Break Camp</h3>
+            <p data-lang="es">Campamento intensivo durante las vacaciones de primavera. Una semana repleta de retos tecnológicos, proyectos de ingeniería y aventura digital.</p>
+            <p data-lang="en">Intensive camp during spring break. A week packed with tech challenges, engineering projects, and digital adventure.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🌸 <span data-lang="es">Semana de Pascua</span><span data-lang="en">Easter Week</span></span>
+              <a href="/ofrecimientos/spring-break" class="btn btn-primary">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card reveal reveal-delay-1">
+          <div class="offering-img">
+            <img src="/images/Ofrecimientos/Winter-Camp.webp" alt="Winter Tech Camp" loading="lazy" />
+            <span class="offering-tag" data-lang="es">Navidades</span>
+            <span class="offering-tag" data-lang="en">Winter Break</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Winter Camp</h3>
+            <h3 data-lang="en">Winter Camp</h3>
+            <p data-lang="es">¡El mejor regalo navideño! Campamento de invierno donde los jóvenes innovadores se sumergen en tecnología, robótica y desarrollo creativo durante las navidades.</p>
+            <p data-lang="en">The best holiday gift! Winter camp where young innovators dive into technology, robotics, and creative development during Christmas break.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">❄️ <span data-lang="es">Diciembre</span><span data-lang="en">December</span></span>
+              <a href="/ofrecimientos/winter-camp" class="btn btn-primary">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card reveal reveal-delay-2">
+          <div class="offering-img" style="background:linear-gradient(135deg,#1A2156,#258EB6);display:flex;align-items:center;justify-content:center;">
+            <img src="/images/early-inventors/IMG_3261.webp" alt="Early Inventors Program" loading="lazy" />
+            <span class="offering-tag" data-lang="es">Edades Tempranas</span>
+            <span class="offering-tag" data-lang="en">Early Ages</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Early Inventors</h3>
+            <h3 data-lang="en">Early Inventors</h3>
+            <p data-lang="es">Programa diseñado para los más pequeños. Introducimos el pensamiento computacional, la creatividad y la resolución de problemas desde etapas tempranas de desarrollo.</p>
+            <p data-lang="en">Program designed for the youngest learners. We introduce computational thinking, creativity, and problem-solving from the earliest stages of development.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🌟 <span data-lang="es">Preescolar – 5to</span><span data-lang="en">Pre-K – 5th Grade</span></span>
+              <a href="/ofrecimientos/early-inventors" class="btn btn-primary">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card offering-card-wro reveal">
+          <div class="offering-img">
+            <img src="/images/wro/IMG_1755.webp" alt="World Robot Olympiad WRO" loading="lazy" />
+            <span class="offering-tag offering-tag-gold" data-lang="es">🌍 Internacional</span>
+            <span class="offering-tag offering-tag-gold" data-lang="en">🌍 International</span>
+          </div>
+          <div class="offering-body">
+            <h3>World Robot Olympiad (WRO)</h3>
+            <p data-lang="es">Techno Inventors lleva equipos a la competencia de robótica más importante del mundo. Nuestros estudiantes representan a Puerto Rico en torneos internacionales ante países de todo el mundo.</p>
+            <p data-lang="en">Techno Inventors sends teams to the world's most important robotics competition. Our students represent Puerto Rico in international tournaments against countries from around the world.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🏆 <span data-lang="es">Competencia Global</span><span data-lang="en">Global Competition</span></span>
+              <a href="/ofrecimientos/wro" class="btn btn-gold">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card offering-card-olimp reveal reveal-delay-1">
+          <div class="offering-img">
+            <img src="/images/olimpiadas/IMG_5248.webp" alt="Olimpiadas Regionales de Robótica" loading="lazy" />
+            <span class="offering-tag offering-tag-orange" data-lang="es">🥇 Regional</span>
+            <span class="offering-tag offering-tag-orange" data-lang="en">🥇 Regional</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Olimpiadas Regionales</h3>
+            <h3 data-lang="en">Regional Olympiad</h3>
+            <p data-lang="es">Competencias regionales de robótica donde nuestros equipos demuestran sus habilidades, estrategia y trabajo en equipo ante jueces y otras instituciones de Puerto Rico.</p>
+            <p data-lang="en">Regional robotics competitions where our teams demonstrate their skills, strategy, and teamwork before judges and other institutions from Puerto Rico.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🤖 <span data-lang="es">Puerto Rico</span><span data-lang="en">Puerto Rico</span></span>
+              <a href="/ofrecimientos/olimpiadas" class="btn btn-orange">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#contact-cta" class="btn btn-navy" style="font-size:1rem;padding:16px 36px;">
+          <span data-lang="es">🎓 Inscribir a mi hijo/a</span>
+          <span data-lang="en">🎓 Enroll My Child</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefits-img reveal">
+          <img src="/images/Ofrecimientos/Beneficios ofrecimientos.webp" alt="Benefits of Techno Inventors programs" loading="lazy" />
+        </div>
+        <div class="reveal reveal-delay-2">
+          <span class="section-tag light" data-lang="es">¿Por qué Techno Inventors?</span>
+          <span class="section-tag light" data-lang="en">Why Techno Inventors?</span>
+          <h2 class="section-title light" data-lang="es">Tu hijo/a merece una educación que lo prepare para el futuro</h2>
+          <h2 class="section-title light" data-lang="en">Your child deserves an education that prepares them for the future</h2>
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <div class="benefit-icon-wrap">🧠</div>
+              <div class="benefit-content">
+                <h4 data-lang="es">Pensamiento Crítico y Resolución de Problemas</h4>
+                <h4 data-lang="en">Critical Thinking and Problem Solving</h4>
+                <p data-lang="es">Desarrollan habilidades para analizar, diseñar e implementar soluciones reales ante retos del mundo actual.</p>
+                <p data-lang="en">Students develop skills to analyze, design, and implement real solutions to today's world challenges.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon-wrap">🏅</div>
+              <div class="benefit-content">
+                <h4 data-lang="es">Competencias y Reconocimiento Internacional</h4>
+                <h4 data-lang="en">International Competitions and Recognition</h4>
+                <p data-lang="es">Participamos en competencias mundiales como la World Robot Olympiad, representando a Puerto Rico con orgullo.</p>
+                <p data-lang="en">We compete in world competitions such as the World Robot Olympiad, proudly representing Puerto Rico.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon-wrap">👥</div>
+              <div class="benefit-content">
+                <h4 data-lang="es">Equipo de Mentores Certificados</h4>
+                <h4 data-lang="en">Team of Certified Mentors</h4>
+                <p data-lang="es">Ingenieros, educadores, científicos y desarrolladores apasionados guían a cada estudiante.</p>
+                <p data-lang="en">Passionate engineers, educators, scientists, and developers guide every student.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon-wrap">🚀</div>
+              <div class="benefit-content">
+                <h4 data-lang="es">Tecnología de Vanguardia</h4>
+                <h4 data-lang="en">Cutting-Edge Technology</h4>
+                <p data-lang="es">Acceden a herramientas de robótica, realidad virtual, drones, IA y programación de clase mundial.</p>
+                <p data-lang="en">Students access world-class robotics, virtual reality, drones, AI, and programming tools.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag" data-lang="es">Galería</span>
+        <span class="section-tag" data-lang="en">Gallery</span>
+        <h2 class="section-title" data-lang="es">Momentos que inspiran el futuro</h2>
+        <h2 class="section-title" data-lang="en">Moments that inspire the future</h2>
+        <p class="section-subtitle" data-lang="es">Cada foto cuenta la historia de un joven innovador descubriendo su potencial tecnológico.</p>
+        <p class="section-subtitle" data-lang="en">Every photo tells the story of a young innovator discovering their technological potential.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item wide tall"><img src="/images/olimpiadas/IMG_5258.webp" alt="Olimpiadas Regionales de Robótica" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/wro/IMG_1755.webp" alt="World Robot Olympiad WRO" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/early-inventors/IMG_3263.webp" alt="Early Inventors Program" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/camps/IMG_3285.webp" alt="Summer Camp actividad" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/olimpiadas/IMG_5276.webp" alt="Competencia de robótica" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item wide"><img src="/images/wro/20251019_172513.webp" alt="Equipo WRO Techno Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/early-inventors/IMG_3284.webp" alt="Taller Early Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/camps/IMG_3283.webp" alt="Camp actividad STEM" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+      </div>
+      <div class="gallery-cta">
+        <a href="/galeria" class="btn btn-navy">
+          <span data-lang="es">Ver galería completa →</span>
+          <span data-lang="en">View full gallery →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag" data-lang="es">Testimonios</span>
+        <span class="section-tag" data-lang="en">Testimonials</span>
+        <h2 class="section-title" data-lang="es">Lo que dicen las familias</h2>
+        <h2 class="section-title" data-lang="en">What families are saying</h2>
+      </div>
+      <div class="testimonials-grid reveal">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-lang="es">"Desde que mi hijo entró al programa after-school, su amor por la tecnología y la confianza en sí mismo han crecido enormemente. Los mentores son excepcionales y el ambiente es increíblemente motivador."</p>
+          <p class="testimonial-text" data-lang="en">"Since my son joined the after-school program, his love for technology and self-confidence have grown enormously. The mentors are exceptional and the environment is incredibly motivating."</p>
+          <hr class="testimonial-divider" />
+          <div class="testimonial-author">
+            <div class="author-avatar">MG</div>
+            <div class="author-info">
+              <strong>María González</strong>
+              <span data-lang="es">Madre de estudiante · San Juan</span>
+              <span data-lang="en">Parent · San Juan</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-lang="es">"El Summer Camp fue una experiencia transformadora para mi hija. Aprendió a programar robots y a trabajar en equipo. Ahora quiere estudiar ingeniería. ¡Esto es exactamente lo que Puerto Rico necesita!"</p>
+          <p class="testimonial-text" data-lang="en">"The Summer Camp was transformative for my daughter. She learned to program robots and work as a team. Now she wants to study engineering. This is exactly what Puerto Rico needs!"</p>
+          <hr class="testimonial-divider" />
+          <div class="testimonial-author">
+            <div class="author-avatar">CR</div>
+            <div class="author-info">
+              <strong>Carlos Rivera</strong>
+              <span data-lang="es">Padre de estudiante · Bayamón</span>
+              <span data-lang="en">Parent · Bayamón</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text" data-lang="es">"El Saturday Club es lo mejor de la semana para mi hijo. Viene a casa emocionado contándome todo lo que aprendió. Ver ese entusiasmo no tiene precio."</p>
+          <p class="testimonial-text" data-lang="en">"Saturday Club is the best part of the week for my son. He comes home excited telling me everything he learned. Seeing that enthusiasm is priceless."</p>
+          <hr class="testimonial-divider" />
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div class="author-info">
+              <strong>Ana Martínez</strong>
+              <span data-lang="es">Madre de estudiante · Caguas</span>
+              <span data-lang="en">Parent · Caguas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALLIANCES ===== -->
+  <section id="alliances" class="section-sm">
+    <div class="container">
+      <div class="alliances-title">
+        <span class="section-tag" data-lang="es">Alianzas Estratégicas</span>
+        <span class="section-tag" data-lang="en">Strategic Alliances</span>
+        <h2 class="section-title" style="margin-top:8px;" data-lang="es">Nuestros aliados hacen posible la misión</h2>
+        <h2 class="section-title" style="margin-top:8px;" data-lang="en">Our allies make the mission possible</h2>
+      </div>
+      <div class="alliances-track-wrap">
+        <div class="alliances-track" id="alliances-track">
+          <img src="/images/Alianzas/Logo_-Alianza_Universidad-Politecnica.webp" alt="Universidad Politécnica" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-de-Alianza_American-High-School.webp" alt="American High School" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-de-Alianza_ESPORT-PRO.webp" alt="eSport Pro" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-de-Alianza_eSTREAM-ACADEMY-Alianza.webp" alt="eSTREAM Academy" class="alliance-logo" />
+          <img src="/images/Alianzas/CECFLW.webp" alt="CECFLW Alliance" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-06.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-09.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-12-copia.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-13.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/2.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/3.webp" alt="Alliance Partner" class="alliance-logo" />
+          <!-- Duplicate for seamless loop -->
+          <img src="/images/Alianzas/Logo_-Alianza_Universidad-Politecnica.webp" alt="Universidad Politécnica" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-de-Alianza_American-High-School.webp" alt="American High School" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-de-Alianza_ESPORT-PRO.webp" alt="eSport Pro" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-de-Alianza_eSTREAM-ACADEMY-Alianza.webp" alt="eSTREAM Academy" class="alliance-logo" />
+          <img src="/images/Alianzas/CECFLW.webp" alt="CECFLW Alliance" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-06.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-09.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-12-copia.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/Logos-Alianzas-13.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/2.webp" alt="Alliance Partner" class="alliance-logo" />
+          <img src="/images/Alianzas/3.webp" alt="Alliance Partner" class="alliance-logo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:0">
+        <span class="section-tag" data-lang="es">Preguntas Frecuentes</span>
+        <span class="section-tag" data-lang="en">Frequently Asked Questions</span>
+        <h2 class="section-title" data-lang="es">Todo lo que necesitas saber</h2>
+        <h2 class="section-title" data-lang="en">Everything you need to know</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-lang="es">¿A qué edades están dirigidos los programas?</span>
+            <span data-lang="en">What ages are the programs for?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p data-lang="es">Tenemos programas para niños desde preescolar hasta 12mo grado. Early Inventors es para los más pequeños (Pre-K a 5to grado), y eSTREAM Academy y Clubs son para estudiantes de 6to a 12mo grado.</p>
+            <p data-lang="en">We have programs for children from pre-kindergarten through 12th grade. Early Inventors is for the youngest learners (Pre-K to 5th grade), while eSTREAM Academy and Clubs are for students in grades 6–12.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-lang="es">¿Necesita mi hijo experiencia previa en tecnología?</span>
+            <span data-lang="en">Does my child need prior tech experience?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p data-lang="es">¡No! Nuestros programas están diseñados para todos los niveles, desde principiantes absolutos hasta jóvenes con experiencia previa. Adaptamos el aprendizaje a cada estudiante.</p>
+            <p data-lang="en">No! Our programs are designed for all levels, from absolute beginners to students with prior experience. We tailor learning to each student's level.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-lang="es">¿Dónde están ubicados y hay transporte disponible?</span>
+            <span data-lang="en">Where are you located and is transportation available?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p data-lang="es">Nuestro centro principal está en Puerto Rico. Operamos en múltiples escuelas e instituciones aliadas por toda la isla. Contacta a un asesor académico para saber la locación más cercana a tu hogar.</p>
+            <p data-lang="en">Our main center is in Puerto Rico. We operate across multiple allied schools and institutions throughout the island. Contact an academic advisor for the location nearest your home.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-lang="es">¿Cuándo comienza la próxima sesión?</span>
+            <span data-lang="en">When does the next session begin?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p data-lang="es">Los campamentos abren inscripciones según el calendario escolar. Los programas After-School y Clubs arrancan al inicio del año escolar. Contáctanos para recibir el calendario completo de sesiones.</p>
+            <p data-lang="en">Camps open registration according to the school calendar. After-School programs and Clubs start at the beginning of the school year. Contact us to receive the full session schedule.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-lang="es">¿Tienen ayudas económicas o becas?</span>
+            <span data-lang="en">Do you offer financial aid or scholarships?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p data-lang="es">Sí. Como organización sin fines de lucro, tenemos donantes y auspiciadores que apoyan becas parciales o completas para familias que califiquen. Habla con nuestro equipo para conocer las opciones disponibles.</p>
+            <p data-lang="en">Yes. As a nonprofit, we have donors and sponsors who support partial or full scholarships for qualifying families. Speak with our team to learn about available options.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span data-lang="es">¿Cómo puedo apoyar la misión de Techno Inventors?</span>
+            <span data-lang="en">How can I support Techno Inventors' mission?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer"><div class="faq-answer-inner">
+            <p data-lang="es">Puedes apoyarnos haciendo una donación, convirtiéndote en auspiciador corporativo, ofreciendo tus horas de voluntariado o compartiendo nuestra misión en redes sociales. Cada gesto impacta una vida.</p>
+            <p data-lang="en">You can support us by making a donation, becoming a corporate sponsor, offering volunteer hours, or sharing our mission on social media. Every gesture impacts a life.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT CTA ===== -->
+  <section id="contact-cta">
+    <div class="container">
+      <div class="cta-content reveal">
+        <span class="section-tag light" data-lang="es">¿Listo para el siguiente paso?</span>
+        <span class="section-tag light" data-lang="en">Ready for the next step?</span>
+        <h2 class="cta-title" data-lang="es">Inscribe a tu hijo/a y<br />transforma su futuro hoy</h2>
+        <h2 class="cta-title" data-lang="en">Enroll your child and<br />transform their future today</h2>
+        <p class="cta-subtitle" data-lang="es">Nuestros asesores académicos te guiarán para encontrar el programa perfecto según la edad, intereses y objetivos de tu hijo/a. La consulta es completamente gratuita.</p>
+        <p class="cta-subtitle" data-lang="en">Our academic advisors will guide you to find the perfect program based on your child's age, interests, and goals. The consultation is completely free.</p>
+        <div class="cta-buttons">
+          <a href="mailto:info@technoinventors.com?subject=Consulta%20Asesor%20Académico" class="btn btn-cta" style="font-size:1rem;padding:18px 36px;">
+            <span data-lang="es">📧 Escríbenos ahora</span>
+            <span data-lang="en">📧 Write to us now</span>
+          </a>
+          <a href="tel:+15557117316" class="btn btn-outline" style="font-size:1rem;padding:18px 36px;">
+            <span data-lang="es">📞 Llamar a un asesor</span>
+            <span data-lang="en">📞 Call an advisor</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* ===== HERO ===== */
+  #hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #0a0e2e 0%, #1A2156 40%, #0d2444 70%, #0a1530 100%); overflow: hidden; }
+  .hero-bg-canvas { position: absolute; inset: 0; overflow: hidden; }
+  .hero-particles { position: absolute; inset: 0; pointer-events: none; }
+  .particle { position: absolute; border-radius: 50%; background: var(--light-blue); animation: float-particle linear infinite; }
+  @keyframes float-particle { 0% { transform: translateY(100vh) scale(0); opacity: 0; } 10% { opacity: 0.6; } 90% { opacity: 0.3; } 100% { transform: translateY(-100px) scale(1); opacity: 0; } }
+  .hero-glow { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(37,142,182,0.25), transparent 70%); pointer-events: none; }
+  .hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 120px 0 80px; }
+  .hero-text .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(37,142,182,0.2); border: 1px solid rgba(136,215,247,0.3); color: var(--light-blue); border-radius: 50px; padding: 8px 18px; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+  .badge-dot { width: 8px; height: 8px; background: var(--light-blue); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+  .hero-title { color: var(--white); margin-bottom: 24px; }
+  .hero-title .accent { color: var(--light-blue); display: block; }
+  .hero-desc { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 36px; max-width: 520px; }
+  .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+  .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-family: 'Orbitron', sans-serif; font-size: 1.6rem; font-weight: 900; color: var(--light-blue); display: block; }
+  .hero-stat .lbl { font-size: 0.7rem; color: rgba(255,255,255,0.6); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+  .hero-visual { position: relative; }
+  .hero-img-wrap { border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.5); border: 2px solid rgba(136,215,247,0.2); }
+  .hero-img-wrap img { width: 100%; object-fit: cover; max-height: 520px; }
+  .hero-float-badge { position: absolute; background: rgba(13,18,53,0.95); border: 1px solid rgba(136,215,247,0.3); backdrop-filter: blur(10px); border-radius: 12px; padding: 12px 16px; color: var(--white); font-size: 0.78rem; font-weight: 600; display: flex; align-items: center; gap: 10px; animation: float-badge 3s ease-in-out infinite; }
+  .hero-float-badge.b1 { bottom: 30px; left: -24px; }
+  .hero-float-badge.b2 { top: 30px; right: -20px; }
+  .hero-float-badge .icon { font-size: 1.4rem; }
+  @keyframes float-badge { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+  /* ===== eSTREAM BAR ===== */
+  #estream-bar { background: linear-gradient(90deg, var(--navy), #1e2d6e, var(--navy)); padding: 24px 0; overflow: hidden; }
+  .estream-inner { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
+  .estream-item { display: flex; flex-direction: column; align-items: center; padding: 12px 28px; border-right: 1px solid rgba(136,215,247,0.15); }
+  .estream-item:last-child { border-right: none; }
+  .estream-letter { font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 900; color: var(--light-blue); line-height: 1; }
+  .estream-word { font-size: 0.62rem; color: rgba(255,255,255,0.6); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+
+  /* ===== ABOUT ===== */
+  #about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .about-img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .about-img-grid img { border-radius: var(--radius); object-fit: cover; height: 180px; }
+  .about-img-grid .img-tall { grid-row: span 2; height: 100%; }
+  .about-text .section-subtitle { margin-bottom: 28px; }
+  .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+  .about-feature { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border); }
+  .feature-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .feature-text h4 { font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .feature-text p { font-size: 0.78rem; line-height: 1.5; }
+
+  /* ===== STATS ===== */
+  #stats { background: linear-gradient(135deg, var(--navy) 0%, #1e2d6e 50%, #0d1840 100%); padding: 70px 0; position: relative; overflow: hidden; }
+  #stats::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%2388D7F7' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; position: relative; }
+  .stat-card { text-align: center; }
+  .stat-number { font-family: 'Orbitron', sans-serif; font-size: clamp(2rem,4vw,3rem); font-weight: 900; color: var(--light-blue); display: block; line-height: 1; }
+  .stat-label { color: rgba(255,255,255,0.75); font-size: 0.85rem; font-weight: 600; margin-top: 8px; letter-spacing: 0.5px; }
+  .stat-divider { width: 40px; height: 3px; background: linear-gradient(90deg, var(--blue), var(--light-blue)); border-radius: 2px; margin: 12px auto 0; }
+
+  /* ===== OFFERINGS ===== */
+  #offerings { background: #f0f4f8; }
+  .offerings-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-top: 48px; }
+  .offering-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); transition: transform var(--transition), box-shadow var(--transition); display: flex; flex-direction: column; }
+  .offering-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .offering-img { position: relative; height: 200px; overflow: hidden; }
+  .offering-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .offering-card:hover .offering-img img { transform: scale(1.05); }
+  .offering-tag { position: absolute; top: 14px; left: 14px; background: var(--navy); color: var(--white); padding: 4px 12px; border-radius: 50px; font-size: 0.68rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .offering-tag-gold { background: linear-gradient(135deg, #d97706, #b45309); box-shadow: 0 2px 8px rgba(217,119,6,0.45); }
+  .offering-tag-orange { background: linear-gradient(135deg, #ea580c, #c2410c); box-shadow: 0 2px 8px rgba(234,88,12,0.45); }
+  .offering-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+  .offering-body h3 { color: var(--navy); margin-bottom: 10px; font-size: 1.1rem; }
+  .offering-body p { font-size: 0.85rem; margin-bottom: 20px; flex: 1; }
+  .offering-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+  .offering-meta { font-size: 0.75rem; color: var(--blue); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  .offering-card .btn { padding: 10px 20px; font-size: 0.78rem; }
+
+  /* ===== BENEFITS ===== */
+  #benefits { background: linear-gradient(135deg, #0a0e2e, var(--navy)); position: relative; overflow: hidden; }
+  .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .benefits-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+  .benefits-img img { width: 100%; height: 500px; object-fit: cover; }
+  .benefit-list { display: flex; flex-direction: column; gap: 24px; margin-top: 32px; }
+  .benefit-item { display: flex; gap: 16px; align-items: flex-start; }
+  .benefit-icon-wrap { width: 48px; height: 48px; border-radius: 12px; background: rgba(136,215,247,0.1); border: 1px solid rgba(136,215,247,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .benefit-content h4 { color: var(--white); font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+  .benefit-content p { color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.65; }
+
+  /* ===== GALLERY ===== */
+  #gallery { background: var(--white); }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 48px; }
+  .gallery-item { position: relative; border-radius: var(--radius); overflow: hidden; cursor: pointer; background: var(--card-bg); aspect-ratio: 1; }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+  .gallery-item:hover img { transform: scale(1.06); }
+  .gallery-overlay { position: absolute; inset: 0; background: rgba(26,33,86,0.5); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition); font-size: 1.8rem; }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-cta { text-align: center; margin-top: 36px; }
+
+  /* ===== TESTIMONIALS ===== */
+  #testimonials { background: var(--white); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+  .testimonial-card { background: var(--card-bg); border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 16px; }
+  .testimonial-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; }
+  .testimonial-text { font-size: 0.88rem; line-height: 1.7; color: var(--text-dark); font-style: italic; }
+  .testimonial-divider { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--navy)); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; flex-shrink: 0; }
+  .author-info { display: flex; flex-direction: column; }
+  .author-info strong { font-size: 0.88rem; color: var(--navy); }
+  .author-info span { font-size: 0.75rem; color: var(--text-muted); }
+
+  /* ===== ALLIANCES ===== */
+  #alliances { background: linear-gradient(135deg, #0a0e2e, var(--navy), #0d1840); padding: 60px 0; }
+  .alliances-title { text-align: center; margin-bottom: 48px; }
+  .alliances-title .section-title { color: var(--white); }
+
+  /* ===== FAQ ===== */
+  #faq { background: #f0f4f8; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
+  .faq-item { background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; }
+  .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; cursor: pointer; font-weight: 700; font-size: 0.9rem; color: var(--navy); gap: 16px; user-select: none; }
+  .faq-icon { font-size: 1.2rem; flex-shrink: 0; transition: transform var(--transition); color: var(--blue); }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+  .faq-answer-inner { padding: 0 24px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+  .faq-item.open .faq-answer { max-height: 200px; }
+
+  /* ===== CONTACT CTA ===== */
+  #contact-cta { background: linear-gradient(135deg, var(--navy) 0%, #1e2d6e 60%, #0d1840 100%); padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+  #contact-cta::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(37,142,182,0.15), transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .cta-content { position: relative; z-index: 1; }
+  .cta-title { color: var(--white); margin-bottom: 20px; margin-top: 0; }
+  .cta-subtitle { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* Testimonials responsive */
+  @media (max-width: 768px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,201 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  canonical?: string;
+  lang?: string;
+}
+
+const {
+  title = 'Techno Inventors | eSTREAM Education Puerto Rico',
+  description = 'Techno Inventors forma líderes socialmente responsables a través del modelo eSTREAM (eSports, Ciencia, Tecnología, Robótica, Ingeniería, Arte y Matemáticas) en Puerto Rico.',
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = '/og-image.jpg',
+  canonical = Astro.url.href,
+  lang = 'es',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content="STEM educación Puerto Rico, robótica niños PR, campamentos tecnología, after school STEM, eSTREAM, Techno Inventors" />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" type="image/webp" href="/Brandbook/Logos/Icon_1.webp" />
+  <link rel="shortcut icon" href="/Brandbook/Logos/Icon_1.webp" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <slot />
+
+  <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+
+  <script>
+    /* ===== LANGUAGE SYSTEM ===== */
+    function setLang(lang: string) {
+      document.body.classList.toggle('lang-en', lang === 'en');
+      const btnEs = document.getElementById('btn-es');
+      const btnEn = document.getElementById('btn-en');
+      if (btnEs) btnEs.classList.toggle('active', lang === 'es');
+      if (btnEn) btnEn.classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('ti-lang', lang);
+    }
+
+    // Make setLang globally accessible for onclick handlers
+    (window as any).setLang = setLang;
+
+    // Init language from localStorage or browser preference
+    (function() {
+      const saved = localStorage.getItem('ti-lang');
+      const browser = navigator.language.startsWith('en') ? 'en' : 'es';
+      setLang(saved || browser);
+    })();
+
+    /* ===== NAVBAR SCROLL ===== */
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 30);
+        const scrollBtn = document.getElementById('scroll-top');
+        if (scrollBtn) scrollBtn.classList.toggle('visible', window.scrollY > 400);
+      }, { passive: true });
+    }
+
+    /* ===== MOBILE MENU ===== */
+    const hamburger = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileClose = document.getElementById('mobile-close');
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+    if (mobileClose && mobileMenu && hamburger) {
+      mobileClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+      mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    const announceClose = document.getElementById('announce-close');
+    const announceBar = document.getElementById('announce-bar');
+    if (announceClose && announceBar) {
+      announceClose.addEventListener('click', () => {
+        announceBar.style.display = 'none';
+      });
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ===== COUNTER ANIMATION ===== */
+    function animateCounter(el: Element) {
+      const target = parseInt((el as HTMLElement).dataset.count || '0', 10);
+      const duration = 2000;
+      const start = performance.now();
+      function easeOut(t: number) { return 1 - Math.pow(1 - t, 3); }
+      function step(now: number) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const current = Math.round(easeOut(progress) * target);
+        el.textContent = current.toLocaleString();
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+    /* ===== FAQ ACCORDION ===== */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        if (!item) return;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    /* ===== GALLERY LIGHTBOX ===== */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement | null;
+    const lightboxClose = document.getElementById('lightbox-close');
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        if (lightbox && lightboxImg) {
+          lightboxImg.src = (img as HTMLImageElement).src;
+          lightboxImg.alt = (img as HTMLImageElement).alt;
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+    function closeLightbox() {
+      if (lightbox) { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+    }
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    /* ===== HERO PARTICLES ===== */
+    const particlesContainer = document.getElementById('hero-particles');
+    if (particlesContainer) {
+      for (let i = 0; i < 18; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 4 + 2;
+        p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;animation-duration:${Math.random()*10+8}s;animation-delay:${Math.random()*8}s;opacity:${Math.random()*0.5+0.1};`;
+        particlesContainer.appendChild(p);
+      }
+    }
+  </script>
+</body>
+</html>
