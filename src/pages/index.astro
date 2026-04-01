@@ -89,6 +89,11 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
+  <!-- ===== MOBILE LOGO (visible only on mobile, between hero and eSTREAM bar) ===== -->
+  <div id="mobile-logo-band">
+    <img src="/Brandbook/Logos/Logo_1.webp" alt="Techno Inventors" loading="eager" />
+  </div>
+
   <!-- ===== eSTREAM BAR ===== -->
   <div id="estream-bar" aria-label="eSTREAM model">
     <div class="estream-inner">
@@ -225,7 +230,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Monday-to-Friday after-school program. Students learn robotics, programming, video game development, virtual and augmented reality in a high-tech environment.</p>
             <div class="offering-footer">
               <span class="offering-meta">📅 <span data-lang="es">Lun – Vie</span><span data-lang="en">Mon – Fri</span></span>
-              <a href="/ofrecimientos/estream-academy" class="btn btn-primary">
+              <a href="https://estream.academy/" target="_blank" rel="noopener" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -265,7 +270,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Summer camp with total technology and innovation immersion. Intensive weeks of programming, robotics, drones, virtual reality, and digital design.</p>
             <div class="offering-footer">
               <span class="offering-meta">☀️ <span data-lang="es">Junio – Agosto</span><span data-lang="en">June – August</span></span>
-              <a href="/ofrecimientos/summer-camp" class="btn btn-primary">
+              <a href="/ofrecimientos/summer-camp" class="btn btn-primary" data-internal>
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -285,7 +290,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Intensive camp during spring break. A week packed with tech challenges, engineering projects, and digital adventure.</p>
             <div class="offering-footer">
               <span class="offering-meta">🌸 <span data-lang="es">Semana de Pascua</span><span data-lang="en">Easter Week</span></span>
-              <a href="/ofrecimientos/spring-break" class="btn btn-primary">
+              <a href="/ofrecimientos/spring-break-camp" class="btn btn-primary" data-internal>
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -325,7 +330,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Program designed for the youngest learners. We introduce computational thinking, creativity, and problem-solving from the earliest stages of development.</p>
             <div class="offering-footer">
               <span class="offering-meta">🌟 <span data-lang="es">Preescolar – 5to</span><span data-lang="en">Pre-K – 5th Grade</span></span>
-              <a href="/ofrecimientos/early-inventors" class="btn btn-primary">
+              <a href="https://earlyinventors.fun/" target="_blank" rel="noopener" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -344,7 +349,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Techno Inventors sends teams to the world's most important robotics competition. Our students represent Puerto Rico in international tournaments against countries from around the world.</p>
             <div class="offering-footer">
               <span class="offering-meta">🏆 <span data-lang="es">Competencia Global</span><span data-lang="en">Global Competition</span></span>
-              <a href="/ofrecimientos/wro" class="btn btn-gold">
+              <a href="https://wro.pr/" target="_blank" rel="noopener" class="btn btn-gold">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -364,7 +369,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Regional robotics competitions where our teams demonstrate their skills, strategy, and teamwork before judges and other institutions from Puerto Rico.</p>
             <div class="offering-footer">
               <span class="offering-meta">🤖 <span data-lang="es">Puerto Rico</span><span data-lang="en">Puerto Rico</span></span>
-              <a href="/ofrecimientos/olimpiadas" class="btn btn-orange">
+              <a href="https://wro.pr/" target="_blank" rel="noopener" class="btn btn-orange">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -806,8 +811,25 @@ import Footer from '../components/Footer.astro';
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
   /* Testimonials responsive */
+  /* ===== MOBILE LOGO BAND ===== */
+  #mobile-logo-band {
+    display: none; /* hidden on desktop */
+    background: var(--navy);
+    padding: 16px 24px;
+    text-align: center;
+    border-bottom: 1px solid rgba(136,215,247,0.15);
+  }
+  #mobile-logo-band img {
+    height: 52px;
+    width: auto;
+    margin: 0 auto;
+  }
+
   /* ===== MOBILE RESPONSIVE ===== */
   @media (max-width: 768px) {
+
+    /* --- MOBILE LOGO BAND --- */
+    #mobile-logo-band { display: block; }
 
     /* --- HERO --- */
     .hero-content {
