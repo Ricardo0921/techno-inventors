@@ -43,8 +43,54 @@ const {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60911753-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-60911753-1');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Ads: 10805343489 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10805343489"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-10805343489');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W2X5M42');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '324369585993614');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=324369585993614&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2X5M42"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <slot />
 
   <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
@@ -53,10 +99,21 @@ const {
     /* ===== LANGUAGE SYSTEM ===== */
     function setLang(lang: string) {
       document.body.classList.toggle('lang-en', lang === 'en');
+      // Top bar buttons (if present)
       const btnEs = document.getElementById('btn-es');
       const btnEn = document.getElementById('btn-en');
       if (btnEs) btnEs.classList.toggle('active', lang === 'es');
       if (btnEn) btnEn.classList.toggle('active', lang === 'en');
+      // Navbar flag buttons
+      const navBtnEs = document.getElementById('nav-btn-es');
+      const navBtnEn = document.getElementById('nav-btn-en');
+      if (navBtnEs) navBtnEs.classList.toggle('active', lang === 'es');
+      if (navBtnEn) navBtnEn.classList.toggle('active', lang === 'en');
+      // Mobile menu flag buttons
+      const mobBtnEs = document.getElementById('mob-btn-es');
+      const mobBtnEn = document.getElementById('mob-btn-en');
+      if (mobBtnEs) mobBtnEs.classList.toggle('active', lang === 'es');
+      if (mobBtnEn) mobBtnEn.classList.toggle('active', lang === 'en');
       document.documentElement.lang = lang;
       localStorage.setItem('ti-lang', lang);
     }

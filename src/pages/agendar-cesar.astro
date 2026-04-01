@@ -1,0 +1,373 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Agendar Cita con César Cabrera | Techno Inventors"
+  description="Agenda una reunión con el Ing. César Cabrera, fundador y presidente de Techno Inventors. Experto en robótica, ingeniería y educación STEM en Puerto Rico."
+  ogTitle="Agendar Cita con César Cabrera | Techno Inventors"
+  ogDescription="Reúnete con el fundador de Techno Inventors, Ing. César Cabrera. Selecciona el horario que mejor te convenga."
+>
+  <Header activePage="agendar" />
+
+  <!-- ===== PAGE HERO ===== -->
+  <section id="page-hero" style="padding: 80px 0 60px;">
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="container">
+      <div class="breadcrumb" style="margin-bottom:24px;">
+        <a href="/">Techno Inventors</a>
+        <span>/</span>
+        <span data-lang="es">Agendar Cita</span>
+        <span data-lang="en">Book a Meeting</span>
+      </div>
+      <div class="cesar-hero-grid">
+        <!-- César Profile Card -->
+        <div class="cesar-profile-card reveal">
+          <div class="cesar-avatar-wrap">
+            <img src="/images/Equipo/Ing. César Cabrera.webp" alt="Ing. César Cabrera - Fundador y Presidente de Techno Inventors" class="cesar-avatar" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+            <div class="cesar-avatar-fallback" style="display:none;">
+              <span>CC</span>
+            </div>
+          </div>
+          <div class="cesar-profile-info">
+            <div class="cesar-badge" data-lang="es">Fundador &amp; Presidente</div>
+            <div class="cesar-badge" data-lang="en">Founder &amp; President</div>
+            <h1 class="cesar-name">Ing. César Cabrera</h1>
+            <p class="cesar-title" data-lang="es">Ingeniero · Profesor · Innovador</p>
+            <p class="cesar-title" data-lang="en">Engineer · Professor · Innovator</p>
+            <div class="cesar-contact-list">
+              <div class="cesar-contact-item">
+                <span class="cesar-contact-icon">📍</span>
+                <span>Puerto Rico &amp; Orlando, Florida</span>
+              </div>
+              <div class="cesar-contact-item">
+                <span class="cesar-contact-icon">📞</span>
+                <a href="tel:+19396420137">+1 (939) 642-0137</a>
+              </div>
+              <div class="cesar-contact-item">
+                <span class="cesar-contact-icon">✉️</span>
+                <a href="mailto:cesar@technoinventors.com">cesar@technoinventors.com</a>
+              </div>
+            </div>
+            <div class="cesar-credentials">
+              <div class="credential-item">
+                <span class="credential-icon">🎓</span>
+                <span data-lang="es">Maestría en Ciencias de Ingeniería — Robótica &amp; Controles</span>
+                <span data-lang="en">M.S. in Engineering Sciences — Robotics &amp; Controls</span>
+              </div>
+              <div class="credential-item">
+                <span class="credential-icon">🚀</span>
+                <span data-lang="es">NASA Academy Alumni · MIT · Carnegie Mellon</span>
+                <span data-lang="en">NASA Academy Alumni · MIT · Carnegie Mellon</span>
+              </div>
+              <div class="credential-item">
+                <span class="credential-icon">⏱️</span>
+                <span data-lang="es">+15 años impactando estudiantes en PR y EE.UU.</span>
+                <span data-lang="en">+15 years impacting students in PR &amp; USA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio Text -->
+        <div class="cesar-bio reveal">
+          <span class="section-tag" data-lang="es">¿Quién es César?</span>
+          <span class="section-tag" data-lang="en">Who is César?</span>
+          <h2 class="section-title" data-lang="es">El ingeniero que transforma el futuro de Puerto Rico</h2>
+          <h2 class="section-title" data-lang="en">The engineer transforming Puerto Rico's future</h2>
+          <p data-lang="es">El ingeniero y profesor César Cabrera nació en Puerto Rico y es el fundador y presidente de la organización Techno Inventors. Con más de 15 años de experiencia, ha impactado miles de estudiantes en escuelas y universidades de Puerto Rico y Estados Unidos, compartiendo conocimientos sobre avances y proyectos actuales en Ciencias, Tecnología, Ingeniería, Robótica, Artes y Matemáticas (STREAM).</p>
+          <p data-lang="en">Engineer and professor César Cabrera was born in Puerto Rico and is the founder and president of Techno Inventors. With more than 15 years of experience, he has impacted thousands of students in schools and universities throughout Puerto Rico and the United States, sharing knowledge about advances and current projects in Science, Technology, Engineering, Robotics, Arts and Mathematics (STREAM).</p>
+          <p data-lang="es">En 2005 fue seleccionado por la <strong>NASA Academy</strong> para ocupar la posición de líder de proyectos, donde trabajó junto a la <strong>Johns Hopkins University (JHUAPL)</strong> desarrollando sistemas de evasión de obstáculos para vehículos robóticos autónomos destinados al planeta Marte. Este proyecto fue llevado a cabo en los laboratorios de <strong>NASA Goddard</strong>, <strong>NASA Houston</strong>, <strong>NASA JPL</strong>, <strong>MIT</strong>, <strong>Artificial Intelligence Lab</strong> y <strong>Carnegie Mellon University</strong>.</p>
+          <p data-lang="en">In 2005 he was selected by the <strong>NASA Academy</strong> to serve as project leader, where he worked with <strong>Johns Hopkins University (JHUAPL)</strong> developing obstacle avoidance systems for autonomous robotic vehicles destined for Mars. This project was carried out at <strong>NASA Goddard</strong>, <strong>NASA Houston</strong>, <strong>NASA JPL</strong>, <strong>MIT</strong>, <strong>Artificial Intelligence Lab</strong>, and <strong>Carnegie Mellon University</strong>.</p>
+          <p data-lang="es">Su mayor interés es lograr la evolución de la educación en Latinoamérica de una manera divertida e innovadora. Bajo su presidencia, Techno Inventors ha certificado a miles de personas en adiestramientos tecnológicos, robótica, desarrollo de videojuegos y nuevas tecnologías.</p>
+          <p data-lang="en">His greatest interest is achieving the evolution of education in Latin America in a fun and innovative way. Under his presidency, Techno Inventors has certified thousands of people in technological training, robotics, video game development, and new technologies.</p>
+          <div class="cesar-cta-note">
+            <span data-lang="es">📅 Agenda una cita directamente en el calendario de César y cuéntale sobre tu proyecto, necesidad educativa o propuesta de colaboración.</span>
+            <span data-lang="en">📅 Schedule a meeting directly on César's calendar and tell him about your project, educational need, or collaboration proposal.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HUBSPOT CALENDAR ===== -->
+  <section id="calendar-section" class="section">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:40px;">
+        <span class="section-tag" data-lang="es">Agenda tu reunión</span>
+        <span class="section-tag" data-lang="en">Schedule your meeting</span>
+        <h2 class="section-title" data-lang="es">Selecciona el horario que mejor te convenga</h2>
+        <h2 class="section-title" data-lang="en">Select the time that works best for you</h2>
+        <p class="section-desc" data-lang="es">Elige un horario disponible en el calendario de César. La reunión será virtual y recibirás la confirmación por correo electrónico.</p>
+        <p class="section-desc" data-lang="en">Choose an available time on César's calendar. The meeting will be virtual and you will receive confirmation by email.</p>
+      </div>
+      <div class="calendar-wrapper reveal">
+        <!-- Start of Meetings Embed Script -->
+        <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/info10713?embed=true"></div>
+        <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+        <!-- End of Meetings Embed Script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY MEET ===== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:48px;">
+        <span class="section-tag section-tag-light" data-lang="es">¿Por qué reunirte con César?</span>
+        <span class="section-tag section-tag-light" data-lang="en">Why meet with César?</span>
+        <h2 class="section-title section-title-light" data-lang="es">Temas que puedes discutir en tu cita</h2>
+        <h2 class="section-title section-title-light" data-lang="en">Topics you can discuss in your meeting</h2>
+      </div>
+      <div class="why-meet-grid">
+        <div class="why-meet-card reveal">
+          <div class="why-meet-icon">🤖</div>
+          <h3 data-lang="es">Programas Educativos STEM</h3>
+          <h3 data-lang="en">STEM Educational Programs</h3>
+          <p data-lang="es">Conoce los programas de eSTREAM Academy, Saturday Club, campamentos y más. Inscripción y detalles académicos.</p>
+          <p data-lang="en">Learn about eSTREAM Academy, Saturday Club, camps and more. Enrollment and academic details.</p>
+        </div>
+        <div class="why-meet-card reveal">
+          <div class="why-meet-icon">🤝</div>
+          <h3 data-lang="es">Alianzas Corporativas</h3>
+          <h3 data-lang="en">Corporate Partnerships</h3>
+          <p data-lang="es">Explora oportunidades de patrocinio, colaboración institucional y programas de responsabilidad social empresarial.</p>
+          <p data-lang="en">Explore sponsorship opportunities, institutional collaboration, and corporate social responsibility programs.</p>
+        </div>
+        <div class="why-meet-card reveal">
+          <div class="why-meet-icon">🏫</div>
+          <h3 data-lang="es">Programas Escolares</h3>
+          <h3 data-lang="en">School Programs</h3>
+          <p data-lang="es">Integra la tecnología y robótica en tu escuela o institución educativa a través de nuestros programas especializados.</p>
+          <p data-lang="en">Integrate technology and robotics into your school or educational institution through our specialized programs.</p>
+        </div>
+        <div class="why-meet-card reveal">
+          <div class="why-meet-icon">🌎</div>
+          <h3 data-lang="es">Conferencias y Talleres</h3>
+          <h3 data-lang="en">Conferences and Workshops</h3>
+          <p data-lang="es">Invita a César como conferencista, facilitador de talleres o consultor en proyectos de innovación tecnológica.</p>
+          <p data-lang="en">Invite César as a speaker, workshop facilitator, or consultant on technology innovation projects.</p>
+        </div>
+        <div class="why-meet-card reveal">
+          <div class="why-meet-icon">💙</div>
+          <h3 data-lang="es">Donaciones y Filantropía</h3>
+          <h3 data-lang="en">Donations and Philanthropy</h3>
+          <p data-lang="es">Conversa sobre cómo tu donación puede transformar la educación STEM en Puerto Rico y el impacto que genera.</p>
+          <p data-lang="en">Discuss how your donation can transform STEM education in Puerto Rico and the impact it generates.</p>
+        </div>
+        <div class="why-meet-card reveal">
+          <div class="why-meet-icon">🚀</div>
+          <h3 data-lang="es">Proyectos de Innovación</h3>
+          <h3 data-lang="en">Innovation Projects</h3>
+          <p data-lang="es">Comparte tu idea de proyecto tecnológico, de robótica o de inteligencia artificial y explora posibles colaboraciones.</p>
+          <p data-lang="en">Share your technology, robotics, or artificial intelligence project idea and explore possible collaborations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* ===== CESAR PAGE STYLES ===== */
+  #page-hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a237e 60%, #0d47a1 100%);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  #page-hero .section-title { color: var(--white); }
+  #page-hero p { color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 16px; }
+  #page-hero strong { color: var(--light-blue); }
+
+  .cesar-hero-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  /* Profile Card */
+  .cesar-profile-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 100px;
+  }
+  .cesar-avatar-wrap {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border: 3px solid var(--light-blue);
+    box-shadow: 0 0 30px rgba(37,142,182,0.4);
+    background: var(--navy);
+  }
+  .cesar-avatar { width: 100%; height: 100%; object-fit: cover; }
+  .cesar-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--blue), var(--navy));
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .cesar-badge {
+    display: inline-block;
+    background: rgba(37,142,182,0.25);
+    border: 1px solid rgba(37,142,182,0.4);
+    color: var(--light-blue);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .cesar-name {
+    color: var(--white);
+    font-size: 1.35rem;
+    font-weight: 800;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .cesar-title {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.82rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+  .cesar-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 16px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+  }
+  .cesar-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .cesar-contact-icon { font-size: 0.9rem; flex-shrink: 0; }
+  .cesar-contact-item a { color: var(--light-blue); text-decoration: none; }
+  .cesar-contact-item a:hover { text-decoration: underline; }
+  .cesar-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+  .credential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.4;
+  }
+  .credential-icon { flex-shrink: 0; font-size: 0.9rem; margin-top: 1px; }
+
+  /* Bio section */
+  .cesar-bio .section-tag { margin-bottom: 12px; }
+  .cesar-bio p { font-size: 0.93rem; line-height: 1.8; }
+  .cesar-cta-note {
+    background: rgba(37,142,182,0.15);
+    border: 1px solid rgba(37,142,182,0.3);
+    border-left: 4px solid var(--light-blue);
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+    margin-top: 24px;
+  }
+
+  /* Calendar section */
+  #calendar-section { background: #f8fafd; }
+  .calendar-wrapper {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(26,33,86,0.1);
+    border: 1px solid var(--border);
+    min-height: 700px;
+  }
+  .calendar-wrapper .meetings-iframe-container {
+    width: 100%;
+    min-height: 700px;
+  }
+  .calendar-wrapper iframe {
+    width: 100%;
+    min-height: 700px;
+    border: none;
+  }
+
+  /* Why Meet cards */
+  .why-meet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .why-meet-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: var(--transition);
+  }
+  .why-meet-card:hover {
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(37,142,182,0.4);
+    transform: translateY(-4px);
+  }
+  .why-meet-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  .why-meet-card h3 {
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .why-meet-card p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.83rem;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .cesar-hero-grid { grid-template-columns: 1fr; }
+    .cesar-profile-card { position: static; max-width: 400px; margin: 0 auto; }
+    .why-meet-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .why-meet-grid { grid-template-columns: 1fr; }
+  }
+</style>

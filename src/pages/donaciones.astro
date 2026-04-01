@@ -203,10 +203,13 @@ import Footer from '../components/Footer.astro';
           <p data-lang="es">Cada contribución, sin importar su tamaño, cambia la vida de un joven inventor en Puerto Rico.</p>
           <p data-lang="en">Every contribution, regardless of size, changes the life of a young inventor in Puerto Rico.</p>
         </div>
-        <a href="mailto:info@technoinventors.com?subject=Donaci%C3%B3n%20a%20Techno%20Inventors&body=Hola%2C%20deseo%20realizar%20una%20donaci%C3%B3n%20a%20Techno%20Inventors.%20Por%20favor%20ind%C3%ADquenme%20los%20pasos%20para%20completar%20el%20proceso." class="btn btn-donate btn-donate-big" id="donate-btn">
-          <span data-lang="es">💙 Proceder con mi donación</span>
-          <span data-lang="en">💙 Proceed with my donation</span>
-        </a>
+        <form name="PrePage" method="post" action="https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx" style="display:flex;justify-content:center;">
+          <input type="hidden" name="LinkId" value="0ed456d8-d00d-4d82-9c9d-0591a1b72631" />
+          <button type="submit" class="btn btn-donate btn-donate-big" id="donate-btn">
+            <span data-lang="es">💙 Proceder con mi donación</span>
+            <span data-lang="en">💙 Proceed with my donation</span>
+          </button>
+        </form>
         <div class="donate-trust-row">
           <span>🔒 <span data-lang="es">Proceso seguro</span><span data-lang="en">Secure process</span></span>
           <span>🏛️ <span data-lang="es">Sin fines de lucro</span><span data-lang="en">Nonprofit</span></span>
@@ -559,10 +562,13 @@ import Footer from '../components/Footer.astro';
               <span data-lang="en">Monday to Friday: 8:00am – 5:00pm</span>
             </div>
           </div>
-          <a href="mailto:info@technoinventors.com?subject=Consulta%20Donaci%C3%B3n" class="btn btn-donate btn-block">
-            <span data-lang="es">💙 Donar ahora</span>
-            <span data-lang="en">💙 Donate now</span>
-          </a>
+          <form name="PrePageContact" method="post" action="https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx" style="width:100%;">
+            <input type="hidden" name="LinkId" value="0ed456d8-d00d-4d82-9c9d-0591a1b72631" />
+            <button type="submit" class="btn btn-donate btn-block">
+              <span data-lang="es">💙 Donar ahora</span>
+              <span data-lang="en">💙 Donate now</span>
+            </button>
+          </form>
         </div>
         <div class="mapa-embed reveal">
           <iframe

@@ -102,6 +102,74 @@ import Footer from '../components/Footer.astro';
     </div>
   </div>
 
+  <!-- ===== OPTIN / NEWSLETTER ===== -->
+  <section id="optin-bar" aria-label="Suscripción">
+    <div class="optin-bg-glow"></div>
+    <div class="container optin-container">
+
+      <!-- LEFT: headline -->
+      <div class="optin-headline">
+        <div class="optin-tag">
+          <span class="optin-dot"></span>
+          <span data-lang="es">¡Mantente informado!</span>
+          <span data-lang="en">Stay informed!</span>
+        </div>
+        <h2 class="optin-title">
+          <span data-lang="es">Únete a la comunidad <em>Techno Inventors</em></span>
+          <span data-lang="en">Join the <em>Techno Inventors</em> community</span>
+        </h2>
+        <p class="optin-sub" data-lang="es">Recibe noticias, fechas de inscripción y recursos eSTREAM directo en tu correo y teléfono.</p>
+        <p class="optin-sub" data-lang="en">Get news, enrollment dates, and eSTREAM resources directly to your email and phone.</p>
+        <div class="optin-badges">
+          <span class="optin-badge">🔒 <span data-lang="es">100% privado</span><span data-lang="en">100% private</span></span>
+          <span class="optin-badge">📵 <span data-lang="es">Sin spam</span><span data-lang="en">No spam</span></span>
+          <span class="optin-badge">✅ <span data-lang="es">Cancela cuando quieras</span><span data-lang="en">Cancel anytime</span></span>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="optin-form-wrap">
+        <form
+          class="optin-form"
+          action="https://mailwizz.technoinventors.com/index.php/lists/ps633g07plca6/subscribe"
+          method="post"
+        >
+          <div class="optin-fields">
+            <div class="optin-field">
+              <label data-lang="es">Nombre</label>
+              <label data-lang="en">Name</label>
+              <input type="text" name="FNAME" placeholder="Tu nombre" required autocomplete="given-name" />
+            </div>
+            <div class="optin-field">
+              <label>Email</label>
+              <input type="email" name="EMAIL" placeholder="tu@email.com" required autocomplete="email" />
+            </div>
+            <div class="optin-field">
+              <label data-lang="es">Teléfono</label>
+              <label data-lang="en">Phone</label>
+              <input type="tel" name="PHONE_NUMBER" placeholder="+1 (787) 000-0000" autocomplete="tel" />
+            </div>
+          </div>
+          <button type="submit" class="optin-btn">
+            <span data-lang="es">🚀 ¡Suscribirme!</span>
+            <span data-lang="en">🚀 Subscribe!</span>
+          </button>
+          <label class="optin-consent">
+            <div class="optin-check-wrap">
+              <input type="checkbox" name="sms_consent" required />
+              <span class="optin-checkmark"></span>
+            </div>
+            <span class="optin-consent-text">
+              <span data-lang="es">Acepto recibir mensajes SMS y correos electrónicos de Techno Inventors. La frecuencia varía. Pueden aplicarse tarifas de mensajes y datos. Responda <strong>STOP</strong> para darse de baja. <a href="/privacidad">Ver Política de Privacidad</a>.</span>
+              <span data-lang="en">I agree to receive SMS messages and emails from Techno Inventors. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to unsubscribe. <a href="/privacidad">View Privacy Policy</a>.</span>
+            </span>
+          </label>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
     <div class="container">
@@ -376,7 +444,7 @@ import Footer from '../components/Footer.astro';
 
         <div class="offering-card reveal reveal-delay-2">
           <div class="offering-img">
-            <img src="/images/Ofrecimientos/After-School.webp" alt="eSTREAM Academy" loading="lazy" />
+            <img src="/images/early-inventors/IMG_3261.webp" alt="eSTREAM Academy" loading="lazy" />
             <span class="offering-tag" data-lang="es">6to – 12mo Grado</span>
             <span class="offering-tag" data-lang="en">Grades 6–12</span>
           </div>
@@ -478,8 +546,8 @@ import Footer from '../components/Footer.astro';
         <div class="gallery-item wide"><img src="/images/wro/20251019_172513.webp" alt="Equipo WRO Techno Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/early-inventors/IMG_3284.webp" alt="Taller Early Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/camps/IMG_3283.webp" alt="Camp actividad STEM" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="/images/desarrollo-profesional/IMG_0937.webp" alt="Desarrollo profesional STEM" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="/images/olimpiadas/IMG_5247.webp" alt="Estudiantes en olimpiada" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item wide"><img src="/images/olimpiadas/IMG_5247.webp" alt="Estudiantes en olimpiada" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item wide"><img src="/images/early-inventors/IMG_3261.webp" alt="Jóvenes en Early Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
       </div>
     </div>
   </section>
@@ -890,5 +958,236 @@ import Footer from '../components/Footer.astro';
     .estream-item { padding: 6px 10px; }
     .estream-letter { font-size: 1.2rem; }
     .hero-float-badge { display: none; }
+  }
+
+  /* ===== OPTIN SECTION ===== */
+  #optin-bar {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0d1235 0%, #1A2156 45%, #0e2a4a 100%);
+    padding: 0;
+    border-top: 1px solid rgba(37,142,182,0.25);
+    border-bottom: 1px solid rgba(37,142,182,0.25);
+  }
+  /* Animated glow blob */
+  .optin-bg-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(245,158,11,0.18) 0%, rgba(234,88,12,0.08) 45%, transparent 70%);
+    top: -200px; right: -120px;
+    pointer-events: none;
+    animation: optin-pulse 6s ease-in-out infinite;
+  }
+  @keyframes optin-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.12); opacity: 1; }
+  }
+  .optin-container {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 48px;
+    align-items: center;
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  /* LEFT headline */
+  .optin-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245,158,11,0.12);
+    border: 1px solid rgba(245,158,11,0.35);
+    color: #f59e0b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .optin-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #f59e0b;
+    animation: optin-blink 1.4s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes optin-blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .optin-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .optin-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .optin-sub {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+  .optin-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .optin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14);
+    color: rgba(255,255,255,0.75);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* RIGHT form */
+  .optin-form-wrap {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 32px 36px;
+    backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 1;
+  }
+  .optin-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .optin-fields .optin-field:last-child {
+    grid-column: span 2;
+  }
+  .optin-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .optin-field label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+  }
+  .optin-field input {
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.07);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.87rem;
+    outline: none;
+    transition: border-color var(--transition), background var(--transition);
+  }
+  .optin-field input::placeholder { color: rgba(255,255,255,0.35); }
+  .optin-field input:focus {
+    border-color: #f59e0b;
+    background: rgba(255,255,255,0.11);
+  }
+  .optin-btn {
+    width: 100%;
+    padding: 13px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 1px;
+    color: var(--white);
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    box-shadow: 0 6px 24px rgba(245,158,11,0.4);
+    transition: all var(--transition);
+    margin-bottom: 18px;
+  }
+  .optin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(245,158,11,0.55);
+    filter: brightness(1.08);
+  }
+  /* Consent row */
+  .optin-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .optin-check-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    margin-top: 2px;
+  }
+  .optin-check-wrap input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%; height: 100%;
+    cursor: pointer;
+    margin: 0;
+  }
+  .optin-checkmark {
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.07);
+    transition: all var(--transition);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .optin-check-wrap input:checked ~ .optin-checkmark {
+    background: #f59e0b;
+    border-color: #f59e0b;
+  }
+  .optin-check-wrap input:checked ~ .optin-checkmark::after {
+    content: '✓';
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .optin-consent-text {
+    font-size: 0.75rem;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.55);
+  }
+  .optin-consent-text strong { color: rgba(255,255,255,0.8); }
+  .optin-consent-text a { color: #f59e0b; text-decoration: underline; text-underline-offset: 2px; }
+  .optin-consent-text a:hover { opacity: 0.8; }
+
+  /* Responsive optin */
+  @media (max-width: 900px) {
+    .optin-container {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+    .optin-title { font-size: 1.4rem; }
+  }
+  @media (max-width: 600px) {
+    .optin-form-wrap { padding: 24px 20px; }
+    .optin-fields { grid-template-columns: 1fr; }
+    .optin-fields .optin-field:last-child { grid-column: span 1; }
+    .optin-badges { gap: 8px; }
   }
 </style>

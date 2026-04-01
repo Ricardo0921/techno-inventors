@@ -112,6 +112,13 @@ p { line-height: 1.7; color: var(--text-muted); }
 .nav-link:hover { color: var(--navy); background: rgba(26,33,86,0.06); }
 .nav-link.active { color: var(--blue); }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
+/* Language flag selector in sticky navbar */
+.nav-lang-switch { display: flex; gap: 4px; align-items: center; flex-shrink: 0; }
+.nav-lang-btn { background: transparent; border: 1.5px solid rgba(26,33,86,0.18); color: var(--navy); padding: 5px 9px; border-radius: 7px; cursor: pointer; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; transition: var(--transition); font-family: 'Montserrat', sans-serif; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+.nav-lang-btn .nav-flag { font-size: 1.05rem; line-height: 1; }
+.nav-lang-btn .nav-lang-label { font-size: 0.68rem; font-weight: 800; }
+.nav-lang-btn:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.nav-lang-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
 .hamburger { display: none; align-items: center; justify-content: center; cursor: pointer; padding: 0; width: 40px; height: 40px; border-radius: 8px; border: 1.5px solid rgba(26,33,86,0.2); background: rgba(26,33,86,0.04); transition: all var(--transition); flex-shrink: 0; }
 .hamburger:hover { background: var(--navy); border-color: var(--navy); }
 .hamburger:hover .hb-lines span { background: var(--white); }
