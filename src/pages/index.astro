@@ -806,7 +806,72 @@ import Footer from '../components/Footer.astro';
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
   /* Testimonials responsive */
+  /* ===== MOBILE RESPONSIVE ===== */
   @media (max-width: 768px) {
+
+    /* --- HERO --- */
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 36px;
+      padding: 100px 0 60px;
+    }
+    .hero-text { text-align: center; }
+    .hero-desc { max-width: 100%; }
+    .hero-buttons { justify-content: center; }
+    .hero-stats { justify-content: center; gap: 20px; }
+    .hero-visual { width: 100%; }
+    .hero-img-wrap img { max-height: 320px; }
+    .hero-float-badge.b1 { left: 8px; bottom: 16px; font-size: 0.7rem; padding: 8px 12px; }
+    .hero-float-badge.b2 { right: 8px; top: 16px; font-size: 0.7rem; padding: 8px 12px; }
+
+    /* --- eSTREAM BAR --- */
+    .estream-inner { gap: 0; }
+    .estream-item { padding: 8px 14px; }
+    .estream-letter { font-size: 1.4rem; }
+    .estream-word { font-size: 0.52rem; }
+
+    /* --- ABOUT --- */
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .about-img-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .about-img-grid img { height: 130px; }
+    .about-features { grid-template-columns: 1fr; }
+
+    /* --- STATS --- */
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+
+    /* --- OFFERINGS --- */
+    .offerings-grid { grid-template-columns: 1fr; gap: 20px; }
+
+    /* --- BENEFITS --- */
+    .benefits-grid { grid-template-columns: 1fr; gap: 36px; }
+    .benefits-img { order: -1; }
+    .benefits-img img { width: 100%; border-radius: var(--radius-lg); }
+
+    /* --- GALLERY --- */
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.tall { grid-row: span 1; aspect-ratio: 1; }
+
+    /* --- TESTIMONIALS --- */
     .testimonials-grid { grid-template-columns: 1fr; }
+
+    /* --- FAQ --- */
+    .faq-grid { grid-template-columns: 1fr; }
+
+    /* --- GENERAL --- */
+    .section { padding: 60px 0; }
+    .section-title { font-size: clamp(1.4rem, 5vw, 2rem); }
+  }
+
+  @media (max-width: 480px) {
+    .hero-content { padding: 90px 0 48px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-number { font-size: 1.8rem; }
+    .estream-item { padding: 6px 10px; }
+    .estream-letter { font-size: 1.2rem; }
+    .hero-float-badge { display: none; }
   }
 </style>
