@@ -399,7 +399,7 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <!-- ===== ALLIANCES CAROUSEL ===== -->
-  <section class="section-sm section-alt">
+  <section class="section-sm section-dark-alliances">
     <div class="container">
       <div class="text-center reveal" style="margin-bottom:32px;">
         <span class="section-tag" data-lang="es">Alianzas que respaldan la misión</span>
@@ -799,6 +799,9 @@ import Footer from '../components/Footer.astro';
 .section { padding: 88px 0; }
 .section-sm { padding: 56px 0; }
 .section-alt { background: #f0f4f8; }
+.section-dark-alliances { padding: 56px 0; background: linear-gradient(135deg, var(--navy) 0%, #0d1440 60%, #162060 100%); }
+.section-dark-alliances .section-tag { color: var(--light-blue); background: rgba(136,215,247,0.12); border-color: rgba(136,215,247,0.25); }
+.section-dark-alliances .section-title { color: var(--white); }
 .section-dark {
   background: linear-gradient(135deg, var(--navy) 0%, #0d1440 100%);
 }

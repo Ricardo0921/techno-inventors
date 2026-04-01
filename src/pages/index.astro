@@ -89,11 +89,6 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- ===== MOBILE LOGO (visible only on mobile, between hero and eSTREAM bar) ===== -->
-  <div id="mobile-logo-band">
-    <img src="/Brandbook/Logos/Logo_1.webp" alt="Techno Inventors" loading="eager" />
-  </div>
-
   <!-- ===== eSTREAM BAR ===== -->
   <div id="estream-bar" aria-label="eSTREAM model">
     <div class="estream-inner">
@@ -217,20 +212,21 @@ import Footer from '../components/Footer.astro';
       </div>
       <div class="offerings-grid">
 
+        <!-- ROW 1 -->
         <div class="offering-card reveal">
           <div class="offering-img">
-            <img src="/images/Ofrecimientos/After-School.webp" alt="eSTREAM Academy After School Program" loading="lazy" />
-            <span class="offering-tag" data-lang="es">6to – 12mo Grado</span>
-            <span class="offering-tag" data-lang="en">Grades 6–12</span>
+            <img src="/images/Ofrecimientos/After-School.webp" alt="After School Program Techno Inventors" loading="lazy" />
+            <span class="offering-tag" data-lang="es">Lun – Vie</span>
+            <span class="offering-tag" data-lang="en">Mon – Fri</span>
           </div>
           <div class="offering-body">
-            <h3 data-lang="es">eSTREAM Academy</h3>
-            <h3 data-lang="en">eSTREAM Academy</h3>
-            <p data-lang="es">Programa after-school de lunes a viernes. Los estudiantes aprenden robótica, programación, desarrollo de videojuegos, realidad virtual y aumentada en un ambiente de alta tecnología.</p>
-            <p data-lang="en">Monday-to-Friday after-school program. Students learn robotics, programming, video game development, virtual and augmented reality in a high-tech environment.</p>
+            <h3 data-lang="es">After School</h3>
+            <h3 data-lang="en">After School</h3>
+            <p data-lang="es">Programa extracurricular de lunes a viernes. Ciencia, robótica y programación STEAM para niños y jóvenes con acompañamiento personalizado presencial o virtual.</p>
+            <p data-lang="en">Weekday after-school program. Science, robotics, and STEAM programming for children and youth with in-person or virtual personalized mentoring.</p>
             <div class="offering-footer">
-              <span class="offering-meta">📅 <span data-lang="es">Lun – Vie</span><span data-lang="en">Mon – Fri</span></span>
-              <a href="https://estream.academy/" target="_blank" rel="noopener" class="btn btn-primary">
+              <span class="offering-meta">📚 <span data-lang="es">6 – 18 años</span><span data-lang="en">Ages 6–18</span></span>
+              <a href="/ofrecimientos/after-school" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -270,13 +266,14 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Summer camp with total technology and innovation immersion. Intensive weeks of programming, robotics, drones, virtual reality, and digital design.</p>
             <div class="offering-footer">
               <span class="offering-meta">☀️ <span data-lang="es">Junio – Agosto</span><span data-lang="en">June – August</span></span>
-              <a href="/ofrecimientos/summer-camp" class="btn btn-primary" data-internal>
+              <a href="/ofrecimientos/summer-camp" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
           </div>
         </div>
 
+        <!-- ROW 2 -->
         <div class="offering-card reveal">
           <div class="offering-img">
             <img src="/images/Ofrecimientos/Spring-Break-Camp.webp" alt="Spring Break Camp" loading="lazy" />
@@ -290,7 +287,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="en">Intensive camp during spring break. A week packed with tech challenges, engineering projects, and digital adventure.</p>
             <div class="offering-footer">
               <span class="offering-meta">🌸 <span data-lang="es">Semana de Pascua</span><span data-lang="en">Easter Week</span></span>
-              <a href="/ofrecimientos/spring-break-camp" class="btn btn-primary" data-internal>
+              <a href="/ofrecimientos/spring-break-camp" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -317,27 +314,7 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <div class="offering-card reveal reveal-delay-2">
-          <div class="offering-img" style="background:linear-gradient(135deg,#1A2156,#258EB6);display:flex;align-items:center;justify-content:center;">
-            <img src="/images/early-inventors/IMG_3261.webp" alt="Early Inventors Program" loading="lazy" />
-            <span class="offering-tag" data-lang="es">Edades Tempranas</span>
-            <span class="offering-tag" data-lang="en">Early Ages</span>
-          </div>
-          <div class="offering-body">
-            <h3 data-lang="es">Early Inventors</h3>
-            <h3 data-lang="en">Early Inventors</h3>
-            <p data-lang="es">Programa diseñado para los más pequeños. Introducimos el pensamiento computacional, la creatividad y la resolución de problemas desde etapas tempranas de desarrollo.</p>
-            <p data-lang="en">Program designed for the youngest learners. We introduce computational thinking, creativity, and problem-solving from the earliest stages of development.</p>
-            <div class="offering-footer">
-              <span class="offering-meta">🌟 <span data-lang="es">Preescolar – 5to</span><span data-lang="en">Pre-K – 5th Grade</span></span>
-              <a href="https://earlyinventors.fun/" target="_blank" rel="noopener" class="btn btn-primary">
-                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="offering-card offering-card-wro reveal">
+        <div class="offering-card offering-card-wro reveal reveal-delay-2">
           <div class="offering-img">
             <img src="/images/wro/IMG_1755.webp" alt="World Robot Olympiad WRO" loading="lazy" />
             <span class="offering-tag offering-tag-gold" data-lang="es">🌍 Internacional</span>
@@ -356,7 +333,8 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <div class="offering-card offering-card-olimp reveal reveal-delay-1">
+        <!-- ROW 3 -->
+        <div class="offering-card offering-card-olimp reveal">
           <div class="offering-img">
             <img src="/images/olimpiadas/IMG_5248.webp" alt="Olimpiadas Regionales de Robótica" loading="lazy" />
             <span class="offering-tag offering-tag-orange" data-lang="es">🥇 Regional</span>
@@ -370,6 +348,45 @@ import Footer from '../components/Footer.astro';
             <div class="offering-footer">
               <span class="offering-meta">🤖 <span data-lang="es">Puerto Rico</span><span data-lang="en">Puerto Rico</span></span>
               <a href="https://wro.pr/" target="_blank" rel="noopener" class="btn btn-orange">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card reveal reveal-delay-1">
+          <div class="offering-img">
+            <img src="/images/early-inventors/IMG_3261.webp" alt="Early Inventors Program" loading="lazy" />
+            <span class="offering-tag" data-lang="es">Edades Tempranas</span>
+            <span class="offering-tag" data-lang="en">Early Ages</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Early Inventors</h3>
+            <h3 data-lang="en">Early Inventors</h3>
+            <p data-lang="es">Programa diseñado para los más pequeños. Introducimos el pensamiento computacional, la creatividad y la resolución de problemas desde etapas tempranas de desarrollo.</p>
+            <p data-lang="en">Program designed for the youngest learners. We introduce computational thinking, creativity, and problem-solving from the earliest stages of development.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🌟 <span data-lang="es">Preescolar – 5to</span><span data-lang="en">Pre-K – 5th Grade</span></span>
+              <a href="https://earlyinventors.fun/" target="_blank" rel="noopener" class="btn btn-primary">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card reveal reveal-delay-2">
+          <div class="offering-img">
+            <img src="/images/Ofrecimientos/After-School.webp" alt="eSTREAM Academy" loading="lazy" />
+            <span class="offering-tag" data-lang="es">6to – 12mo Grado</span>
+            <span class="offering-tag" data-lang="en">Grades 6–12</span>
+          </div>
+          <div class="offering-body">
+            <h3>eSTREAM Academy</h3>
+            <p data-lang="es">La academia oficial del modelo eSTREAM. Robótica avanzada, programación, realidad virtual y desarrollo de videojuegos en un ambiente de alta tecnología en San Juan y Hato Rey.</p>
+            <p data-lang="en">The official eSTREAM model academy. Advanced robotics, programming, virtual reality, and game development in a high-tech environment in San Juan and Hato Rey.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🚀 <span data-lang="es">Academia Oficial</span><span data-lang="en">Official Academy</span></span>
+              <a href="https://estream.academy/" target="_blank" rel="noopener" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -461,12 +478,8 @@ import Footer from '../components/Footer.astro';
         <div class="gallery-item wide"><img src="/images/wro/20251019_172513.webp" alt="Equipo WRO Techno Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/early-inventors/IMG_3284.webp" alt="Taller Early Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/camps/IMG_3283.webp" alt="Camp actividad STEM" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
-      </div>
-      <div class="gallery-cta">
-        <a href="/galeria" class="btn btn-navy">
-          <span data-lang="es">Ver galería completa →</span>
-          <span data-lang="en">View full gallery →</span>
-        </a>
+        <div class="gallery-item"><img src="/images/desarrollo-profesional/IMG_0937.webp" alt="Desarrollo profesional STEM" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/olimpiadas/IMG_5247.webp" alt="Estudiantes en olimpiada" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
       </div>
     </div>
   </section>
@@ -810,26 +823,8 @@ import Footer from '../components/Footer.astro';
   .cta-subtitle { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-  /* Testimonials responsive */
-  /* ===== MOBILE LOGO BAND ===== */
-  #mobile-logo-band {
-    display: none; /* hidden on desktop */
-    background: var(--navy);
-    padding: 16px 24px;
-    text-align: center;
-    border-bottom: 1px solid rgba(136,215,247,0.15);
-  }
-  #mobile-logo-band img {
-    height: 52px;
-    width: auto;
-    margin: 0 auto;
-  }
-
   /* ===== MOBILE RESPONSIVE ===== */
   @media (max-width: 768px) {
-
-    /* --- MOBILE LOGO BAND --- */
-    #mobile-logo-band { display: block; }
 
     /* --- HERO --- */
     .hero-content {
