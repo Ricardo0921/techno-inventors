@@ -19,7 +19,7 @@ const { activePage = '' } = Astro.props;
 <!-- ===== TOP BAR ===== -->
 <div id="top-bar">
   <div class="container inner">
-    <span>📍 Puerto Rico &nbsp;|&nbsp; <a href="mailto:info@technoinventors.com">info@technoinventors.com</a> &nbsp;|&nbsp; <a href="tel:+19396420137">+1 (939) 642-0137</a></span>
+    <span>📍 Puerto Rico &nbsp;|&nbsp; <a href="mailto:info@technoinventors.com">info@technoinventors.com</a> &nbsp;|&nbsp; <a href="tel:+17872335736">+1 (787) 233-5736</a></span>
     <div style="display:flex;gap:16px;align-items:center;">
       <div class="socials">
         <a href="https://facebook.com/technoinventors" target="_blank" rel="noopener" aria-label="Facebook">
@@ -49,7 +49,7 @@ const { activePage = '' } = Astro.props;
 <nav id="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Techno Inventors Home">
-      <img src="/Brandbook/Logos/Logo_1.webp" alt="Techno Inventors Logo" loading="eager" />
+      <img src="/images/Logos/Logo_1.webp" alt="Techno Inventors Logo" loading="eager" />
     </a>
     <ul class="nav-menu">
       <li>
@@ -106,7 +106,7 @@ const { activePage = '' } = Astro.props;
 <!-- ===== MOBILE MENU ===== -->
 <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
   <div class="mobile-menu-header">
-    <img src="/Brandbook/Logos/Logo_2.webp" alt="Techno Inventors" loading="eager" />
+    <img src="/images/Logos/Logo_2.webp" alt="Techno Inventors" loading="eager" />
     <button id="mobile-close" aria-label="Close menu">
       <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
@@ -127,20 +127,21 @@ const { activePage = '' } = Astro.props;
     <a href="/agendar-cesar" class="mobile-nav-link" data-lang="en">Book a Meeting with César</a>
   </div>
   <div class="mobile-menu-footer">
-    <!-- Language flags in mobile menu -->
-    <div style="display:flex;gap:8px;margin-bottom:16px;justify-content:center;">
-      <button class="nav-lang-btn active" id="mob-btn-es" onclick="setLang('es')" aria-label="Español" style="flex:1;justify-content:center;">
-        <span class="nav-flag">🇵🇷</span>
-        <span class="nav-lang-label">Español</span>
-      </button>
-      <button class="nav-lang-btn" id="mob-btn-en" onclick="setLang('en')" aria-label="English" style="flex:1;justify-content:center;">
-        <span class="nav-flag">🇺🇸</span>
-        <span class="nav-lang-label">English</span>
-      </button>
-    </div>
     <a href="/#contact-cta" class="btn btn-cta" style="width:100%;justify-content:center;font-size:0.9rem;">
       <span data-lang="es">🎓 Contactar Asesor</span>
       <span data-lang="en">🎓 Contact Advisor</span>
     </a>
   </div>
+</div>
+
+<!-- ===== FLOATING LANGUAGE SWITCHER (mobile only) ===== -->
+<div id="floating-lang-switch" aria-label="Language switcher">
+  <button class="nav-lang-btn active" id="mob-btn-es" onclick="setLang('es')" aria-label="Español">
+    <span class="nav-flag">🇵🇷</span>
+    <span class="nav-lang-label">ES</span>
+  </button>
+  <button class="nav-lang-btn" id="mob-btn-en" onclick="setLang('en')" aria-label="English">
+    <span class="nav-flag">🇺🇸</span>
+    <span class="nav-lang-label">EN</span>
+  </button>
 </div>

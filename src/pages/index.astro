@@ -280,7 +280,13 @@ import Footer from '../components/Footer.astro';
       </div>
       <div class="offerings-grid">
 
-        <!-- ROW 1 -->
+        <!-- CATEGORY 1: PROGRAMAS EXTRACURRICULARES -->
+        <div class="offering-category-header">
+          <span class="cat-icon">📚</span>
+          <h3 data-lang="es">Programas Extracurriculares</h3>
+          <h3 data-lang="en">Extracurricular Programs</h3>
+        </div>
+
         <div class="offering-card reveal">
           <div class="offering-img">
             <img src="/images/Ofrecimientos/After-School.webp" alt="After School Program Techno Inventors" loading="lazy" />
@@ -293,7 +299,7 @@ import Footer from '../components/Footer.astro';
             <p data-lang="es">Programa extracurricular de lunes a viernes. Ciencia, robótica y programación STEAM para niños y jóvenes con acompañamiento personalizado presencial o virtual.</p>
             <p data-lang="en">Weekday after-school program. Science, robotics, and STEAM programming for children and youth with in-person or virtual personalized mentoring.</p>
             <div class="offering-footer">
-              <span class="offering-meta">📚 <span data-lang="es">6 – 18 años</span><span data-lang="en">Ages 6–18</span></span>
+              <span class="offering-meta">📚 <span data-lang="es">K–12</span><span data-lang="en">K–12</span></span>
               <a href="/ofrecimientos/after-school" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
@@ -341,7 +347,6 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <!-- ROW 2 -->
         <div class="offering-card reveal">
           <div class="offering-img">
             <img src="/images/Ofrecimientos/Spring-Break-Camp.webp" alt="Spring Break Camp" loading="lazy" />
@@ -382,40 +387,26 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <div class="offering-card offering-card-wro reveal reveal-delay-2">
-          <div class="offering-img">
-            <img src="/images/wro/IMG_1755.webp" alt="World Robot Olympiad WRO" loading="lazy" />
-            <span class="offering-tag offering-tag-gold" data-lang="es">🌍 Internacional</span>
-            <span class="offering-tag offering-tag-gold" data-lang="en">🌍 International</span>
-          </div>
-          <div class="offering-body">
-            <h3>World Robot Olympiad (WRO)</h3>
-            <p data-lang="es">Techno Inventors lleva equipos a la competencia de robótica más importante del mundo. Nuestros estudiantes representan a Puerto Rico en torneos internacionales ante países de todo el mundo.</p>
-            <p data-lang="en">Techno Inventors sends teams to the world's most important robotics competition. Our students represent Puerto Rico in international tournaments against countries from around the world.</p>
-            <div class="offering-footer">
-              <span class="offering-meta">🏆 <span data-lang="es">Competencia Global</span><span data-lang="en">Global Competition</span></span>
-              <a href="https://wro.pr/" target="_blank" rel="noopener" class="btn btn-gold">
-                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
-              </a>
-            </div>
-          </div>
+        <!-- CATEGORY 2: OFRECIMIENTOS ACADÉMICOS -->
+        <div class="offering-category-header">
+          <span class="cat-icon">🎓</span>
+          <h3 data-lang="es">Ofrecimientos Académicos</h3>
+          <h3 data-lang="en">Academic Programs</h3>
         </div>
 
-        <!-- ROW 3 -->
-        <div class="offering-card offering-card-olimp reveal">
+        <div class="offering-card reveal">
           <div class="offering-img">
-            <img src="/images/olimpiadas/IMG_5248.webp" alt="Olimpiadas Regionales de Robótica" loading="lazy" />
-            <span class="offering-tag offering-tag-orange" data-lang="es">🥇 Regional</span>
-            <span class="offering-tag offering-tag-orange" data-lang="en">🥇 Regional</span>
+            <img src="/images/gallery/EA-graduados (1).webp" alt="eSTREAM Academy" loading="lazy" />
+            <span class="offering-tag" data-lang="es">K – 12mo Grado</span>
+            <span class="offering-tag" data-lang="en">K–12 Grade</span>
           </div>
           <div class="offering-body">
-            <h3 data-lang="es">Olimpiadas Regionales</h3>
-            <h3 data-lang="en">Regional Olympiad</h3>
-            <p data-lang="es">Competencias regionales de robótica donde nuestros equipos demuestran sus habilidades, estrategia y trabajo en equipo ante jueces y otras instituciones de Puerto Rico.</p>
-            <p data-lang="en">Regional robotics competitions where our teams demonstrate their skills, strategy, and teamwork before judges and other institutions from Puerto Rico.</p>
+            <h3>eSTREAM Academy</h3>
+            <p data-lang="es">Academia de preparatoria K-12 que integra todas las disciplinas con tecnología de vanguardia: IA, Robótica, Ciberseguridad y Diseño de Videojuegos. En alianza con la Universidad del Pacífico.</p>
+            <p data-lang="en">K-12 preparatory academy integrating all disciplines with cutting-edge technology: AI, Robotics, Cybersecurity, and Video Game Design. In alliance with the University of the Pacific.</p>
             <div class="offering-footer">
-              <span class="offering-meta">🤖 <span data-lang="es">Puerto Rico</span><span data-lang="en">Puerto Rico</span></span>
-              <a href="https://wro.pr/" target="_blank" rel="noopener" class="btn btn-orange">
+              <span class="offering-meta">🚀 <span data-lang="es">Academia Oficial</span><span data-lang="en">Official Academy</span></span>
+              <a href="https://estream.academy/" target="_blank" rel="noopener" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
             </div>
@@ -425,16 +416,16 @@ import Footer from '../components/Footer.astro';
         <div class="offering-card reveal reveal-delay-1">
           <div class="offering-img">
             <img src="/images/early-inventors/IMG_3261.webp" alt="Early Inventors Program" loading="lazy" />
-            <span class="offering-tag" data-lang="es">Edades Tempranas</span>
-            <span class="offering-tag" data-lang="en">Early Ages</span>
+            <span class="offering-tag" data-lang="es">2 meses – Pre-K</span>
+            <span class="offering-tag" data-lang="en">2 months – Pre-K</span>
           </div>
           <div class="offering-body">
             <h3 data-lang="es">Early Inventors</h3>
             <h3 data-lang="en">Early Inventors</h3>
-            <p data-lang="es">Programa diseñado para los más pequeños. Introducimos el pensamiento computacional, la creatividad y la resolución de problemas desde etapas tempranas de desarrollo.</p>
-            <p data-lang="en">Program designed for the youngest learners. We introduce computational thinking, creativity, and problem-solving from the earliest stages of development.</p>
+            <p data-lang="es">Centro preescolar que atiende desde infantes de 2 meses hasta niños de Pre-K (4 años). Introducimos el modelo e.S.T.R.E.A.M. desde la primera infancia con estimulación temprana y pensamiento creativo.</p>
+            <p data-lang="en">Preschool center serving infants from 2 months through Pre-K children (age 4). We introduce the e.S.T.R.E.A.M. model from early childhood with early stimulation and creative thinking.</p>
             <div class="offering-footer">
-              <span class="offering-meta">🌟 <span data-lang="es">Preescolar – 5to</span><span data-lang="en">Pre-K – 5th Grade</span></span>
+              <span class="offering-meta">🌟 <span data-lang="es">Infantes – Pre-K</span><span data-lang="en">Infants – Pre-K</span></span>
               <a href="https://earlyinventors.fun/" target="_blank" rel="noopener" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
               </a>
@@ -442,20 +433,74 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <div class="offering-card reveal reveal-delay-2">
+        <!-- CATEGORY 3: DESARROLLO PROFESIONAL -->
+        <div class="offering-category-header">
+          <span class="cat-icon">💼</span>
+          <h3 data-lang="es">Desarrollo Profesional</h3>
+          <h3 data-lang="en">Professional Development</h3>
+        </div>
+
+        <div class="offering-card offering-card-pro reveal">
           <div class="offering-img">
-            <img src="/images/early-inventors/IMG_3261.webp" alt="eSTREAM Academy" loading="lazy" />
-            <span class="offering-tag" data-lang="es">6to – 12mo Grado</span>
-            <span class="offering-tag" data-lang="en">Grades 6–12</span>
+            <img src="/images/desarrollo-profesional/IMG_0925.webp" alt="Capacitación Profesional Techno Inventors" loading="lazy" />
+            <span class="offering-tag offering-tag-pro" data-lang="es">💼 Adultos &amp; Empresas</span>
+            <span class="offering-tag offering-tag-pro" data-lang="en">💼 Adults &amp; Business</span>
           </div>
           <div class="offering-body">
-            <h3>eSTREAM Academy</h3>
-            <p data-lang="es">La academia oficial del modelo eSTREAM. Robótica avanzada, programación, realidad virtual y desarrollo de videojuegos en un ambiente de alta tecnología en San Juan y Hato Rey.</p>
-            <p data-lang="en">The official eSTREAM model academy. Advanced robotics, programming, virtual reality, and game development in a high-tech environment in San Juan and Hato Rey.</p>
+            <h3 data-lang="es">Capacitación Profesional</h3>
+            <h3 data-lang="en">Professional Training</h3>
+            <p data-lang="es">Certificaciones en Robótica Educativa, Drones Comerciales (FAA-107), Impresión 3D, Videojuegos VR y Robótica Industrial. Modelo train-the-trainer para empresas y educadores.</p>
+            <p data-lang="en">Certifications in Educational Robotics, Commercial Drones (FAA-107), 3D Printing, VR Video Games, and Industrial Robotics. Train-the-trainer model for companies and educators.</p>
             <div class="offering-footer">
-              <span class="offering-meta">🚀 <span data-lang="es">Academia Oficial</span><span data-lang="en">Official Academy</span></span>
-              <a href="https://estream.academy/" target="_blank" rel="noopener" class="btn btn-primary">
+              <span class="offering-meta">🏆 <span data-lang="es">5 Certificaciones</span><span data-lang="en">5 Certifications</span></span>
+              <a href="/ofrecimientos/desarrollo-profesional" class="btn btn-primary">
                 <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: OLIMPIADAS DE ROBÓTICA -->
+        <div class="offering-category-header">
+          <span class="cat-icon">🤖</span>
+          <h3 data-lang="es">Olimpiadas de Robótica</h3>
+          <h3 data-lang="en">Robotics Olympiads</h3>
+        </div>
+
+        <div class="offering-card offering-card-olimp reveal">
+          <div class="offering-img">
+            <img src="/images/olimpiadas/IMG_5248.webp" alt="Puerto Rico Robot Olympiads" loading="lazy" />
+            <span class="offering-tag offering-tag-orange" data-lang="es">🥇 Puerto Rico</span>
+            <span class="offering-tag offering-tag-orange" data-lang="en">🥇 Puerto Rico</span>
+          </div>
+          <div class="offering-body">
+            <h3 data-lang="es">Puerto Rico Robot Olympiads</h3>
+            <h3 data-lang="en">Puerto Rico Robot Olympiads</h3>
+            <p data-lang="es">Eventos regionales de robótica que se celebran durante todo el año en Puerto Rico. Nuestros equipos compiten y demuestran sus habilidades ante jueces e instituciones de toda la isla.</p>
+            <p data-lang="en">Regional robotics events held throughout the year across Puerto Rico. Our teams compete and demonstrate their skills before judges and institutions from across the island.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🤖 <span data-lang="es">Todo el año</span><span data-lang="en">Year-round</span></span>
+              <a href="https://wro.pr/" target="_blank" rel="noopener" class="btn btn-orange">
+                <span data-lang="es">Ver más</span><span data-lang="en">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="offering-card offering-card-wro reveal reveal-delay-1">
+          <div class="offering-img">
+            <img src="/images/wro/IMG_1755.webp" alt="World Robot Olympiad WRO" loading="lazy" />
+            <span class="offering-tag offering-tag-gold" data-lang="es">🌍 Internacional</span>
+            <span class="offering-tag offering-tag-gold" data-lang="en">🌍 International</span>
+          </div>
+          <div class="offering-body">
+            <h3>World Robot Olympiad (WRO)</h3>
+            <p data-lang="es">Del 8 al 10 de diciembre — 4,000+ talentos de 8 a 19 años de 125 países y más de 10,000 personas. Techno Inventors lleva equipos de Puerto Rico a representarnos en el escenario global de robótica.</p>
+            <p data-lang="en">December 8–10 — 4,000+ talents ages 8–19 from 125 countries and 10,000+ people. Techno Inventors sends Puerto Rico's teams to represent us on the global robotics stage.</p>
+            <div class="offering-footer">
+              <span class="offering-meta">🏆 <span data-lang="es">Dic 8–10 · 125 países</span><span data-lang="en">Dec 8–10 · 125 countries</span></span>
+              <a href="https://wro2026.org/" target="_blank" rel="noopener" class="btn btn-gold">
+                <span data-lang="es">Ver WRO 2026</span><span data-lang="en">See WRO 2026</span>
               </a>
             </div>
           </div>
@@ -540,14 +585,13 @@ import Footer from '../components/Footer.astro';
       <div class="gallery-grid reveal">
         <div class="gallery-item wide tall"><img src="/images/olimpiadas/IMG_5258.webp" alt="Olimpiadas Regionales de Robótica" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/wro/IMG_1755.webp" alt="World Robot Olympiad WRO" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
-        <div class="gallery-item"><img src="/images/early-inventors/IMG_3263.webp" alt="Early Inventors Program" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/camps/IMG_3285.webp" alt="Summer Camp actividad" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/olimpiadas/IMG_5276.webp" alt="Competencia de robótica" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
-        <div class="gallery-item wide"><img src="/images/wro/20251019_172513.webp" alt="Equipo WRO Techno Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/wro/20251019_172513.webp" alt="Equipo WRO Techno Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/early-inventors/IMG_3284.webp" alt="Taller Early Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
         <div class="gallery-item"><img src="/images/camps/IMG_3283.webp" alt="Camp actividad STEM" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
-        <div class="gallery-item wide"><img src="/images/olimpiadas/IMG_5247.webp" alt="Estudiantes en olimpiada" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
-        <div class="gallery-item wide"><img src="/images/early-inventors/IMG_3261.webp" alt="Jóvenes en Early Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/olimpiadas/IMG_5247.webp" alt="Estudiantes en olimpiada" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
+        <div class="gallery-item"><img src="/images/early-inventors/IMG_3261.webp" alt="Jóvenes en Early Inventors" loading="lazy" /><div class="gallery-overlay"><span>🔍</span></div></div>
       </div>
     </div>
   </section>
@@ -664,8 +708,8 @@ import Footer from '../components/Footer.astro';
             <span class="faq-icon">+</span>
           </div>
           <div class="faq-answer"><div class="faq-answer-inner">
-            <p data-lang="es">Tenemos programas para niños desde preescolar hasta 12mo grado. Early Inventors es para los más pequeños (Pre-K a 5to grado), y eSTREAM Academy y Clubs son para estudiantes de 6to a 12mo grado.</p>
-            <p data-lang="en">We have programs for children from pre-kindergarten through 12th grade. Early Inventors is for the youngest learners (Pre-K to 5th grade), while eSTREAM Academy and Clubs are for students in grades 6–12.</p>
+            <p data-lang="es">Tenemos programas para todos: desde infantes de 2 meses hasta jóvenes en grado 12. Early Inventors atiende desde bebés hasta Pre-K, los programas extracurriculares son para K–12, y la eSTREAM Academy cubre desde kindergarten hasta grado 12. También ofrecemos capacitación para adultos y profesionales.</p>
+            <p data-lang="en">We have programs for everyone: from infants 2 months old through grade 12 students. Early Inventors serves babies through Pre-K, extracurricular programs cover K–12, and eSTREAM Academy spans kindergarten through grade 12. We also offer training for adults and professionals.</p>
           </div></div>
         </div>
         <div class="faq-item">
@@ -742,9 +786,13 @@ import Footer from '../components/Footer.astro';
             <span data-lang="es">📧 Escríbenos ahora</span>
             <span data-lang="en">📧 Write to us now</span>
           </a>
-          <a href="tel:+15557117316" class="btn btn-outline" style="font-size:1rem;padding:18px 36px;">
+          <a href="tel:+17872335736" class="btn btn-outline" style="font-size:1rem;padding:18px 36px;">
             <span data-lang="es">📞 Llamar a un asesor</span>
             <span data-lang="en">📞 Call an advisor</span>
+          </a>
+          <a href="https://wro.pr/oh" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:1rem;padding:18px 36px;">
+            <span data-lang="es">🏫 Open House</span>
+            <span data-lang="en">🏫 Open House</span>
           </a>
         </div>
       </div>
@@ -830,6 +878,15 @@ import Footer from '../components/Footer.astro';
   .offering-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
   .offering-meta { font-size: 0.75rem; color: var(--blue); font-weight: 600; display: flex; align-items: center; gap: 6px; }
   .offering-card .btn { padding: 10px 20px; font-size: 0.78rem; }
+  /* Category headers spanning full grid width */
+  .offering-category-header { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: var(--navy); border-radius: var(--radius); margin-top: 16px; }
+  .offering-category-header:first-child { margin-top: 0; }
+  .offering-category-header .cat-icon { font-size: 1.5rem; }
+  .offering-category-header h3 { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; color: var(--light-blue); margin: 0; }
+  /* Pro card styling */
+  .offering-tag-pro { background: linear-gradient(135deg, #0f766e, #0d9488); box-shadow: 0 2px 8px rgba(15,118,110,0.45); }
+  .offering-card-pro { border: 2px solid rgba(13,148,136,0.3); }
+  .offering-card-pro:hover { border-color: #0d9488; }
 
   /* ===== BENEFITS ===== */
   #benefits { background: linear-gradient(135deg, #0a0e2e, var(--navy)); position: relative; overflow: hidden; }
